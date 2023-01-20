@@ -1,222 +1,347 @@
+<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>CJ Garcia's Resume</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	<title>CJ Garcia's Resume</title>
 </head>
+
 <body>
-	<div class="content">
-		<div class="header">
-			<div class="section-bar section-bar-odd"></div>
-			<div class="general-info">
-				<div class="name">CJ Garcia</div>
-				<div class="subtitle">Software Engineering Apprentice</div>
-				<div class="bio">
-					I am a frontend engineer with a proven track record of successfully taking designs from mock-ups to full implementation using a variety of modern frameworks. My interest in UX and expertise in accessibility ensures that all of my work is user-friendly and inclusive. With a background in music, I have honed my ability to think creatively and come up with new ideas easily.				</div>
+	<div class="tab">
+		<button class="tablinks active" onclick="openSection(event, 'Resume')">Resume</button>
+		<button class="tablinks" onclick="openSection(event, 'Projects')">Projects</button>
+	</div>
+	<div id="Resume" class="tab-content" style="display: block;">
+		<div class="resume-content">
+			<div class="header">
+				<div class="section-bar section-bar-odd"></div>
+				<div class="general-info">
+					<div class="name">CJ Garcia</div>
+					<div class="subtitle">Software Engineering Apprentice</div>
+					<div class="bio">
+						I am a frontend engineer with a proven track record of successfully taking designs from mock-ups
+						to
+						full implementation using a variety of modern frameworks. My interest in UX and expertise in
+						accessibility ensures that all of my work is user-friendly and inclusive. With a background in
+						music, I have honed my ability to think creatively and come up with new ideas easily. </div>
+				</div>
+				<div class="separator-dot"></div>
+				<div class="contact">
+					<div class="contact-row">
+						<div class="icon-circle icon-circle-light">
+							<div class="icon icon-light">
+								<i class="material-icons">email</i>
+							</div>
+						</div>
+						<a href="mailto: cj.lifeofmusic@gmail.com" class="blank-link">
+							cj.lifeofmusic@gmail.com
+						</a>
+					</div>
+					<div class="contact-row">
+						<div class="icon-circle icon-circle-light">
+							<div class="icon icon-light">
+								<i class="material-icons">phone_android</i>
+							</div>
+						</div>
+						<div>303-725-3506</div>
+					</div>
+					<div class="contact-row">
+						<div class="icon-circle icon-circle-light">
+							<div class="icon icon-light">
+								<i class="material-icons">location_on</i>
+							</div>
+						</div>
+						<div>Atlanta, GA</div>
+					</div>
+					<div class="contact-row">
+						<div class="icon-circle icon-circle-light">
+							<div class="icon icon-light">
+								<i class="fa fa-github" style="font-size: 24px;"></i>
+							</div>
+						</div>
+						<a href="http://www.github.com/CJGarciaMusic" target="_blank" class="blank-link">
+							github.com/CJGarciaMusic
+						</a>
+					</div>
+				</div>
 			</div>
-			<div class="separator-dot"></div>
-			<div class="contact">
-				<div class="contact-row">
-					<div class="icon-circle icon-circle-light">
-						<div class="icon icon-light">
-							<i class="material-icons">email</i>
+
+			<div class="section-content">
+				<div class="section-bar section-bar-even"></div>
+				<div class="skills-content">
+					<div class="section-header">
+						<div class="icon-circle icon-circle-dark">
+							<div class="icon icon-dark">
+								<i class="material-icons">psychology</i>
+							</div>
+						</div>
+						<div class="section-title">
+							SKILLS
 						</div>
 					</div>
-					<a href="mailto: cj.lifeofmusic@gmail.com" class="blank-link">
-						cj.lifeofmusic@gmail.com
-					</a>
+					<div class="skill-list">
+						<div class="skill-type">Technical:</div>
+						<div class="single-skill" onclick="navTo(event)">Angular</div>
+						<div class="single-skill">TypeScript</div>
+						<div class="single-skill">Flutter</div>
+						<div class="single-skill">Dart</div>
+						<div class="single-skill">Lua</div>
+						<div class="single-skill">Java</div>
+						<div class="single-skill">HTML/CSS</div>
+					</div>
+					<div class="skill-list">
+						<div class="skill-type">Durable:</div>
+						<div class="single-skill">Public Speaking</div>
+						<div class="single-skill">Presenting</div>
+						<div class="single-skill">Adaptability</div>
+					</div>
 				</div>
-				<div class="contact-row">
-					<div class="icon-circle icon-circle-light">
-						<div class="icon icon-light">
-							<i class="material-icons">phone_android</i>
+			</div>
+			<div class="section-content">
+				<div class="section-bar section-bar-odd"></div>
+				<div class="work-history-content">
+					<div class="section-header">
+						<div class="icon-circle icon-circle-dark">
+							<div class="icon icon-dark">
+								<i class="material-icons">work</i>
+							</div>
+						</div>
+						<div class="section-title">
+							WORK EXPERIENCE
 						</div>
 					</div>
-					<div>303-725-3506</div>
+
+					<div class="work-history-title">Software Engineering Apprentice</div>
+					<div class="work-history-company">Google</div>
+					<div class="work-history-summary">
+						<div>
+							10/2021 - Present
+						</div>
+						<div>
+							Atlanta, GA
+						</div>
+					</div>
+					<div class="work-history-summary">
+						This apprenticeship program is designed for people with nontraditional backgrounds to help them
+						learn how to become a software engineer through both industry standard projects as well as on
+						the
+						job experience.
+					</div>
+					<div class="work-history-summary">Team Rotation Projects</div>
+					<ul>
+						<li>
+							Play Points Project - I implemented a feature that dynamically renders footer links on a
+							series
+							of five user facing pages. The primary language used for this full stack feature was Java as
+							well as internal templating and rendering languages.
+						</li>
+					</ul>
+					<div class="work-hisotry-reference">
+						<div class="reference-item">References: </div>
+						<div class="reference-item">Zhen Li (Mentor) -
+							<a href="mailto: zhenzhenzhenli@google.com"
+								class="reference-link">zhenzhenzhenli@google.com</a>
+							<br>
+							Sameer Abhyankar (Manager) -
+							<a href="mailto: sameeraabhyankar@google.com"
+								class="reference-link">sameeraabhyankar@google.com</a>
+						</div>
+					</div>
+					<ul>
+						<li>
+							Core DevIntel Work - I started off by contributing small updates to the front end and
+							quickly
+							transitioned into owning a whole UI and experience from implementation through launch. This
+							work
+							has primarily been front end focused using Angular/Typescript with a Java based backend.
+						</li>
+					</ul>
+					<div class="work-hisotry-reference">
+						<div class="reference-item">Reference: </div>
+						<div class="reference-item"> Jo Trinh (Mentor) -
+							<a href="mailto: jotrinh@google.com" class="reference-link">jotrinh@google.com</a>
+							<br>
+							Evanda Remington (Manager) -
+							<a href="mailto: evanda@google.com" class="reference-link">evanda@google.com</a>
+						</div>
+					</div>
+
+					<div class="work-history-title">Music Production Engineer</div>
+					<div class="work-history-company">MakeMusic</div>
+					<div class="work-history-summary">
+						<div>
+							3/2015 - 9/2021
+						</div>
+						<div>
+							Boulder, CO
+						</div>
+					</div>
+					<div class="work-history-summary">
+						MakeMusic, Inc. is a music technology company comprised of Finale, the world's best-selling
+						music
+						notation software; MakeMusic Cloud, formerly SmartMusic, an interactive practice application
+						featuring the world's largest online sheet music library; and Garritan, the leading provider of
+						quality virtual software instruments.
+					</div>
+					<div class="work-history-summary">Primary Responsibilities</div>
+					<ul>
+						<li>
+							Built, uploaded, provided QA, and released content for the MakeMusic Cloud content library.
+						</li>
+						<li>
+							Updated then created a new department wiki for documentation of processes and a central
+							go-to
+							reference.
+						</li>
+						<li>
+							Mentored coworkers on best practices and continue to lead those efforts by creating training
+							materials and training sessions.
+						</li>
+						<li>
+							Created a suite of OS agnostic automation scripts that removed the reliability on external
+							software, automated tasks for a number of applications including Finale, Digital Performer,
+							Preview, and ran refactored Bash scripts for interacting with the SVN server.
+						</li>
+					</ul>
+					<div class="work-hisotry-reference">
+						<div class="reference-item">References: </div>
+						<div class="reference-item">Derek Richard (Manager) -
+							<a href="mailto: drichard@alfred.com" class="reference-link">drichard@alfred.com</a>
+							<br>
+							Heath Mathews (SVP, Content & Licensing ) -
+							<a href="mailto: hamathews@me.com" class="reference-link">hamathews@me.com</a>
+						</div>
+					</div>
 				</div>
-				<div class="contact-row">
-					<div class="icon-circle icon-circle-light">
-						<div class="icon icon-light">
-							<i class="material-icons">location_on</i>
+			</div>
+
+			<div class="section-content">
+				<div class="section-bar section-bar-even"></div>
+				<div class="work-history-content">
+					<div class="section-header">
+						<div class="icon-circle icon-circle-dark">
+							<div class="icon icon-dark">
+								<i class="material-icons">school</i>
+							</div>
+						</div>
+						<div class="section-title">
+							EDUCATION
 						</div>
 					</div>
-					<div>Atlanta, GA</div>
-				</div>
-				<div class="contact-row">
-					<div class="icon-circle icon-circle-light">
-						<div class="icon icon-light">
-							<i class="fa fa-github" style="font-size: 24px;"></i>
+					<div class="work-history-title">Bachelor of Music Composition</div>
+					<div class="work-history-company">University of Denver</div>
+					<div class="work-history-summary">
+						<div>
+							9/2011 - 6/2015
+						</div>
+						<div>
+							Denver, CO
 						</div>
 					</div>
-					<a href="http://www.github.com/CJGarciaMusic" target="_blank" class="blank-link">
-						github.com/CJGarciaMusic
-					</a>
 				</div>
 			</div>
 		</div>
-
-		<div class="section-content">
-			<div class="section-bar section-bar-even"></div>
-			<div class="skills-content">
-				<div class="section-header">
-					<div class="icon-circle icon-circle-dark">
-						<div class="icon icon-dark">
-							<i class="material-icons">psychology</i>
-						</div>
-					</div>
-					<div class="section-title">
-						SKILLS
-					</div>
-				</div>
-				<div class="skill-list">
-					<div class="single-skill">Technical:</div>
-					<div class="single-skill">Angular</div>
-					<div class="single-skill">TypeScript</div>
-					<div class="single-skill">Flutter</div>
-					<div class="single-skill">Dart</div>
-					<div class="single-skill">Lua</div>
-					<div class="single-skill">Java</div>
-					<div class="single-skill">HTML/CSS</div>
-				</div>
-				<div class="skill-list">
-					<div class="single-skill">Durable:</div>
-					<div class="single-skill">Public Speaking</div>
-					<div class="single-skill">Presenting</div>
-					<div class="single-skill">Adaptability</div>
-				</div>
-			</div>
+		<div style="text-align: center; padding: 10px;">
+			<button onclick="createPDFfromHTML()">Download as PDF</button>
 		</div>
-		<div class="section-content">
-			<div class="section-bar section-bar-odd"></div>
-			<div class="work-history-content">
-				<div class="section-header">
-					<div class="icon-circle icon-circle-dark">
-						<div class="icon icon-dark">
-							<i class="material-icons">work</i>
-						</div>
-					</div>
-					<div class="section-title">
-						WORK EXPERIENCE
-					</div>
-				</div>
-
-				<div class="work-history-title">Software Engineering Apprentice</div>
-				<div class="work-history-company">Google</div>
-				<div class="work-history-summary">
-					<div>
-						10/2021 - Present
-					</div>
-					<div>
-						Atlanta, GA
-					</div>
-				</div>
-				<div class="work-history-summary">
-					This apprenticeship program is designed for people with nontraditional backgrounds to help them learn how to become a software engineer through both industry standard projects as well as on the job experience. 
-				</div>
-				<div class="work-history-summary">Team Rotation Projects</div>
-				<ul>
-					<li>
-						Play Points Project - I implemented a feature that dynamically renders footer links on a series of five user facing pages. The primary language used for this full stack feature was Java as well as internal templating and rendering languages.
-					</li>
-				</ul>
-				<div class="work-hisotry-reference">
-					<div class="reference-item">References: </div>
-					<div class="reference-item">Zhen Li (Mentor) - 
-						<a href="mailto: zhenzhenzhenli@google.com" class="reference-link">zhenzhenzhenli@google.com</a>
-						<br>
-						Sameer Abhyankar (Manager) - 
-						<a href="mailto: sameeraabhyankar@google.com" class="reference-link">sameeraabhyankar@google.com</a>
-					</div>
-				</div>
-				<ul>
-					<li>
-						Core DevIntel Work -  I started off by contributing small updates to the front end and quickly transitioned into owning a whole UI and experience from implementation through launch. This work has primarily been front end focused using Angular/Typescript with a Java based backend.
-					</li>
-				</ul>
-				<div class="work-hisotry-reference">
-					<div class="reference-item">Reference: </div>
-					<div class="reference-item"> Jo Trinh (Mentor) - 
-						<a href="mailto: jotrinh@google.com" class="reference-link">jotrinh@google.com</a>
-						<br>
-						Evanda Remington (Manager) - 
-						<a href="mailto: evanda@google.com" class="reference-link">evanda@google.com</a>
-					</div>
-				</div>
-
-				<div class="work-history-title">Music Production Engineer</div>
-				<div class="work-history-company">MakeMusic</div>
-				<div class="work-history-summary">
-					<div>
-						3/2015 - 9/2021
-					</div>
-					<div>
-						Boulder, CO
-					</div>
-				</div>
-				<div class="work-history-summary">
-					MakeMusic, Inc. is a music technology company comprised of Finale, the world's best-selling music notation software; MakeMusic Cloud, formerly SmartMusic, an interactive practice application featuring the world's largest online sheet music library; and Garritan, the leading provider of quality virtual software instruments.
-				</div>
-				<div class="work-history-summary">Primary Responsibilities</div>
-				<ul>
-					<li>
-						Built, uploaded, provided QA, and released content for the MakeMusic Cloud content library.
-					</li>
-					<li>
-						Updated then created a new department wiki for documentation of processes and a central go-to reference.
-					</li>
-					<li>
-						Mentored coworkers on best practices and continue to lead those efforts by creating training materials and training sessions.
-					</li>
-					<li>
-						Created a suite of OS agnostic automation scripts that removed the reliability on external software, automated tasks for a number of applications including Finale, Digital Performer, Preview, and ran refactored Bash scripts for interacting with the SVN server.
-					</li>
-				</ul>
-				<div class="work-hisotry-reference">
-					<div class="reference-item">References: </div>
-					<div class="reference-item">Derek Richard (Manager) - 
-						<a href="mailto: drichard@alfred.com" class="reference-link">drichard@alfred.com</a>
-						<br>
-						Heath Mathews (SVP, Content & Licensing ) - 
-						<a href="mailto: hamathews@me.com" class="reference-link">hamathews@me.com</a>
-					</div>
-				</div>
+	</div>
+	<div id="Projects" class="tab-content">
+		<div class="project-content">
+			<button class="collapsible">Angular</button>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+					et
+					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip
+					ex ea commodo consequat.</p>
 			</div>
-		</div>
-
-		<div class="section-content">
-			<div class="section-bar section-bar-even"></div>
-			<div class="work-history-content">
-				<div class="section-header">
-					<div class="icon-circle icon-circle-dark">
-						<div class="icon icon-dark">
-							<i class="material-icons">school</i>
-						</div>
-					</div>
-					<div class="section-title">
-						EDUCATION
-					</div>
-				</div>
-				<div class="work-history-title">Bachelor of Music Composition</div>
-				<div class="work-history-company">University of Denver</div>
-				<div class="work-history-summary">
-					<div>
-						9/2011 - 6/2015
-					</div>
-					<div>
-						Denver, CO
-					</div>
-				</div>
+			<button class="collapsible">Flutter</button>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+					et
+					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip
+					ex ea commodo consequat.</p>
+			</div>
+			<button class="collapsible">Web</button>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+					et
+					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip
+					ex ea commodo consequat.</p>
 			</div>
 		</div>
 	</div>
 </body>
 <style>
-	body{
+	body {
 		background-color: #313b47;
+		/* Heebo, Cabin, varela Round, asap, catamarand, Dongle */
+		font-family: 'Varela Round', sans-serif;
+		--standard-radius: 10px;
+		--content-width: 1212px;
+		--dark-color: #313c4e;
+		--light-color: #449399;
+		--standard-grey: #7c7c7c;
+		--light-grey: #ebebeb;
+		--blue-tone: #beb8eb;
+		--standard-transition-time: 0.3s;
+	}
+
+	/* Style the tab */
+	.tab {
+		overflow: hidden;
+		width: var(--content-width);
+		padding: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		column-gap: 40px;
+	}
+
+	/* Style the buttons inside the tab */
+	button {
+		font-family: inherit;
+		font-size: 24px;
+		background-color: var(--light-grey);
+		border-radius: var(--standard-radius);
+		color: var(--dark-color);
+		border: none;
+		outline: none;
+		cursor: pointer;
+		padding: 14px 16px;
+		transition: var(--standard-transition-time);
+	}
+
+	/* Change background color of buttons on hover */
+	button:hover {
+		background-color: var(--light-color);
+		color: #fff;
+	}
+
+	/* Create an active/current tablink class */
+	button.active {
+		background-color: var(--light-color);
+		color: #fff;
+	}
+
+	/* Style the tab content */
+	.tab-content {
+		display: none;
+		padding: 6px 12px;
+		border-top: none;
 	}
 
 	ul {
@@ -226,7 +351,7 @@
 	ul li::before {
 		content: "\2022";
 		color: var(--light-color);
-		font-weight: bold; 
+		font-weight: bold;
 		display: inline-block;
 		width: 0.75em;
 		margin-left: -1em;
@@ -236,38 +361,39 @@
 	.blank-link {
 		text-decoration: none;
 		color: #fff;
-		transition: 0.2s ease-in-out;
+		transition: var(--standard-transition-time) ease-in-out;
 	}
 
-	.blank-link:hover{
+	.blank-link:hover {
 		color: var(--light-color);
 	}
 
 	.reference-link {
 		text-decoration: none;
-		color: #000;
-		transition: 0.2s ease-in-out;
+		color: var(--dark-color);
+		transition: var(--standard-transition-time) ease-in-out;
 	}
 
-	.reference-link:hover{
+	.reference-link:hover {
 		color: var(--light-color);
 	}
 
-	.content {
-		/* Heebo, Cabin, varela Round, asap, catamarand, Dongle */
-		font-family: 'Varela Round', sans-serif;
-		--standard-radius: 10px;
-		--dark-color: #313c4e;
-		--light-color: #449399;
-		--standard-grey: #7c7c7c;
-		/* width: 8.5in; */
-		width: 1212px;
-		/* height: 11in; */
+	.resume-content {
+		width: var(--content-width);
 		height: 1581px;
 		background-color: white;
 		padding: 10px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.project-content {
+		width: var(--content-width);
+		background-color: white;
+		padding: 10px;
+		margin-left: auto;
+		margin-right: auto;
+
 	}
 
 	.section-bar {
@@ -293,9 +419,9 @@
 	.general-info {
 		border-top-left-radius: var(--standard-radius);
 		border-bottom-left-radius: var(--standard-radius);
-		background-color: #ebebeb;
+		background-color: var(--light-grey);
 		padding: 10px;
-		flex:1;
+		flex: 1;
 	}
 
 	.name {
@@ -354,11 +480,11 @@
 	}
 
 	.icon-light {
-		color: var(--light-color); 
+		color: var(--light-color);
 	}
 
 	.icon-dark {
-		color: var(--dark-color); 
+		color: var(--dark-color);
 	}
 
 	.separator-dot {
@@ -404,13 +530,12 @@
 	.skill-list {
 		display: flex;
 		flex-direction: row;
-		column-gap: 10px;
+		column-gap: 15px;
 		color: #fff;
-		/* height: 25px; */
 		align-items: center;
 	}
 
-	.single-skill:first-child {
+	.skill-type {
 		color: var(--dark-color);
 		font-size: 24px;
 		background-color: #fff;
@@ -422,6 +547,13 @@
 		background-color: var(--light-color);
 		padding: 5px 20px;
 		border-radius: 5px;
+		transition: var(--standard-transition-time) ease-in-out;
+	}
+
+	.single-skill:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+		opacity: 0.75;
 	}
 
 	.work-history-content {
@@ -431,7 +563,7 @@
 		padding: 10px 90px 10px 10px;
 		width: 100%;
 	}
-	
+
 	.work-history-title {
 		color: #000;
 		font-size: 24px;
@@ -472,11 +604,117 @@
 	.reference-item {
 		color: var(--standard-grey);
 	}
-	.reference-item:last-child{
+
+	.reference-item:last-child {
 		color: #000;
 	}
 
+	.collapsible {
+		background-color: #777;
+		color: white;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+	}
 
+	.collapsible-active,
+	.collapsible:hover {
+		background-color: #555;
+	}
 
+	.collapsible:after {
+		content: '\002B';
+		color: white;
+		font-weight: bold;
+		float: right;
+		margin-left: 5px;
+	}
 
+	.collapsible-active:after {
+		content: "\2212";
+	}
+
+	.content {
+		padding: 0 18px;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+		background-color: #f1f1f1;
+	}
 </style>
+
+<script>
+	function openSection(evt, sectionName) {
+		var i, tabContent, tablinks;
+		tabContent = document.getElementsByClassName("tab-content");
+		for (i = 0; i < tabContent.length; i++) {
+			tabContent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(sectionName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+	function createPDFfromHTML() {
+		var HTML_Width = $(".resume-content").width();
+		var HTML_Height = $(".resume-content").height();
+		var top_left_margin = 15;
+		var PDF_Width = HTML_Width + (top_left_margin * 2);
+		var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
+		var canvas_image_width = HTML_Width;
+		var canvas_image_height = HTML_Height;
+
+		var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+
+		html2canvas($(".resume-content")[0]).then(function (canvas) {
+			var imgData = canvas.toDataURL("image/jpeg", 1.0);
+			window.jsPDF = window.jspdf.jsPDF;
+			var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
+			pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+			for (var i = 1; i <= totalPDFPages; i++) {
+				pdf.addPage(PDF_Width, PDF_Height);
+				pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 4), canvas_image_width, canvas_image_height);
+			}
+			pdf.save("CJ_Garcia_Resume.pdf");
+		});
+	}
+
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function () {
+			this.classList.toggle("collapsible-active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight) {
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+			}
+		});
+	}
+
+	function navTo(evt) {
+		var coll = document.getElementsByClassName("collapsible");
+
+		buttonText = evt.path[0].innerText;
+		for (var i = 0; i < coll.length; i++) {
+			if (coll[i].innerText == buttonText) {
+				coll[i].classList.add("collapsible-active");
+				var content = coll[i].nextElementSibling;
+				content.style.maxHeight = content.scrollHeight + "px";
+			} else {
+				coll[i].classList.remove("collapsible-active");
+				var content = coll[i].nextElementSibling;
+				content.style.maxHeight = null;
+			}
+		}
+	}
+</script>

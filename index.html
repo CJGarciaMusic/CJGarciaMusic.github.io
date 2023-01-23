@@ -93,13 +93,13 @@
 					</div>
 					<div class="skill-list">
 						<div class="skill-type">Technical:</div>
-						<div class="single-skill" onclick="navTo(event)">Angular</div>
-						<div class="single-skill" onclick="navTo(event)">TypeScript</div>
-						<div class="single-skill" onclick="navTo(event)">Flutter</div>
-						<div class="single-skill" onclick="navTo(event)">Dart</div>
-						<div class="single-skill" onclick="navTo(event)">Lua</div>
-						<div class="single-skill" onclick="navTo(event)">Java</div>
-						<div class="single-skill" onclick="navTo(event)">HTML/CSS/Javascript</div>
+						<div id="Angular" class="single-skill" onclick="navTo(event)">Angular</div>
+						<div id="Angular" class="single-skill" onclick="navTo(event)">TypeScript</div>
+						<div id="Flutter" class="single-skill" onclick="navTo(event)">Flutter</div>
+						<div id="Flutter" class="single-skill" onclick="navTo(event)">Dart</div>
+						<div id="HTML/CSS/Javascript" class="single-skill" onclick="navTo(event)">HTML/CSS/Javascript</div>
+						<div id="Java" class="single-skill" onclick="navTo(event)">Java</div>
+						<div id="Lua" class="single-skill" onclick="navTo(event)">Lua</div>
 					</div>
 					<div class="skill-list">
 						<div class="skill-type">Durable:</div>
@@ -288,11 +288,86 @@
 			</div>
 			<button class="collapsible" onclick="columnClick(event)">Flutter</button>
 			<div class="collapsible-content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-					et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip
-					ex ea commodo consequat.</p>
+				<p>
+					<a class="project-link" href="https://github.com/CJGarciaMusic/Seeds" target="_blank">
+						Seeds - WIP
+					</a>
+					<ul class="project-ul">
+						<li>
+							Multiple page application for users to design and share beadwork patterns	
+						</li>
+						<li>
+							Firebase user authentication and Firestore backend
+						</li>
+						<li>
+							<a class="project-link" href="https://www.figma.com/file/cLW6k4OKrH62u63BnW4DEe/Beadwork?node-id=201%3A18735" target="_blank">
+								Designed in Figma
+							</a>
+							- either click the Play button in the top right to get an interactive look or select "Main app" on the top left to see the full design
+						</li>
+					</ul>
+				</p>
+				<p>
+					<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter" target="_blank">
+						Flutter Codelabs
+					</a>
+					<ul class="project-ul">
+						<li>
+								<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter/tree/main/flash_chat" target="_blank">
+									Messaging App
+								</a>
+								- a multiple page chat app will user authentication through firebase and a firestore backend.
+						</li>
+						<li>
+							<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter/tree/main/clima" target="_blank">
+								Weather App
+							</a>
+							- a multiple page weather app that retrieves data from the openweathermap API using device location or a searchable city
+						</li>
+						<li>
+							<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter/tree/main/flutter_drawing_app" target="_blank">
+								Drawing App
+							</a>
+							- a simple, one page, free drawing app
+						</li>
+						<li>
+							<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter/tree/main/bmi_calculator" target="_blank">
+								BMI Calculator
+							</a>
+							- a multiple page BMI Calculator focusing on customization of UI components as well as passing data between pages
+						</li>
+						<li>
+							<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter/tree/main/quizzler" target="_blank">
+								Quiz Game
+							</a>
+							- single page quiz game that keeps track of players right and wrong answers using a predefined bank of questions
+						</li>
+						<li>
+							<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter/tree/main/bitcoin_ticker" target="_blank">
+								Bitcoin Ticker
+							</a>
+							- a single page app that shows the live value of bitcoin and compares the conversion of it to other crypto coins (API service no longer receiving data)
+						</li>
+						<li>
+							<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter/tree/main/xylophone" target="_blank">
+								Diatonic Xylophone
+							</a>
+							- a simple interactive app that plays back xylophone pitches
+						</li>
+						<li>
+							<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter/tree/main/dice_flutter" target="_blank">
+								Dice Roller
+							</a>
+							- a simple app that rolls two dice on screen
+						</li>
+						<li>
+							<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter/tree/main/i_am_rich" target="_blank">
+								I am rich 2.0
+							</a>
+							- the first project in a course of a single static page mimicing the "I am rich" app
+						</li>
+					</ul>
+				</p>
 			</div>
 			<button class="collapsible" onclick="columnClick(event)">HTML/CSS/Javascript</button>
 			<div class="collapsible-content">
@@ -401,7 +476,7 @@
 	}
 
 	.project-link {
-		font-size: 18px;
+		font-size: 20px;
 		text-decoration: none;
 		color: var(--dark-color);
 		transition: var(--standard-transition-time) ease-in-out;
@@ -409,6 +484,10 @@
 
 	.project-link:hover {
 		color: var(--light-color);
+	}
+
+	.project-ul li {
+		margin: 10px 0px;
 	}
 
 	.resume-content {
@@ -691,6 +770,7 @@
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
 		background-color: var(--light-grey);
+		font-size: 20px;
 	}
 </style>
 
@@ -744,7 +824,6 @@
 
 	function columnClick(event) {
 		var element = event.srcElement;
-		console.log(element);
 		element.classList.toggle("collapsible-active");
 		var content = element.nextElementSibling;
 		if (content.style.maxHeight) {
@@ -758,17 +837,16 @@
 		var projectTab = document.getElementById("ProjectsTab");
 		openSection(projectTab, "Projects");
 		projectTab.className += " active";
-
 		var coll = document.getElementsByClassName("collapsible");
-		buttonText = evt.path[0].innerText;
+		buttonText = evt.path[0].id;
+		for (var i = 0; i < coll.length; i++) {
+			coll[i].classList.remove("collapsible-active");
+			var content = coll[i].nextElementSibling;
+			content.style.maxHeight = null;
+		}
 		for (var i = 0; i < coll.length; i++) {
 			if (coll[i].innerText == buttonText) {
-				// coll[i].classList.remove("collapsible-active");
 				coll[i].click();
-			} else {
-				coll[i].classList.remove("collapsible-active");
-				var content = coll[i].nextElementSibling;
-				content.style.maxHeight = null;
 			}
 		}
 	}

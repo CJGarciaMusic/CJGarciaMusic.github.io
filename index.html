@@ -17,10 +17,13 @@
 
 <body>
 	<div class="tab">
-		<button class="tablinks active" onclick="openSection(event, 'Resume')">Resume</button>
-		<button class="tablinks" onclick="openSection(event, 'Projects')">Projects</button>
+		<button id="ResumeTab" class="tablinks active" onclick="openSection(event, 'Resume')">Resume</button>
+		<button id="ProjectsTab" class="tablinks" onclick="openSection(event, 'Projects')">Projects</button>
 	</div>
 	<div id="Resume" class="tab-content" style="display: block;">
+		<div style="text-align: center; padding: 10px;">
+			<button onclick="createPDFfromHTML()">Download as PDF</button>
+		</div>
 		<div class="resume-content">
 			<div class="header">
 				<div class="section-bar section-bar-odd"></div>
@@ -32,7 +35,7 @@
 						to
 						full implementation using a variety of modern frameworks. My interest in UX and expertise in
 						accessibility ensures that all of my work is user-friendly and inclusive. With a background in
-						music, I have honed my ability to think creatively and come up with new ideas easily. </div>
+						music, I have honed my ability to think outside the box and come up with creative solutions easily. </div>
 				</div>
 				<div class="separator-dot"></div>
 				<div class="contact">
@@ -91,12 +94,12 @@
 					<div class="skill-list">
 						<div class="skill-type">Technical:</div>
 						<div class="single-skill" onclick="navTo(event)">Angular</div>
-						<div class="single-skill">TypeScript</div>
-						<div class="single-skill">Flutter</div>
-						<div class="single-skill">Dart</div>
-						<div class="single-skill">Lua</div>
-						<div class="single-skill">Java</div>
-						<div class="single-skill">HTML/CSS</div>
+						<div class="single-skill" onclick="navTo(event)">TypeScript</div>
+						<div class="single-skill" onclick="navTo(event)">Flutter</div>
+						<div class="single-skill" onclick="navTo(event)">Dart</div>
+						<div class="single-skill" onclick="navTo(event)">Lua</div>
+						<div class="single-skill" onclick="navTo(event)">Java</div>
+						<div class="single-skill" onclick="navTo(event)">HTML/CSS/Javascript</div>
 					</div>
 					<div class="skill-list">
 						<div class="skill-type">Durable:</div>
@@ -136,7 +139,7 @@
 						the
 						job experience.
 					</div>
-					<div class="work-history-summary">Team Rotation Projects</div>
+					<!-- <div class="work-history-summary">Team Rotation Projects</div> -->
 					<ul>
 						<li>
 							Play Points Project - I implemented a feature that dynamically renders footer links on a
@@ -192,7 +195,7 @@
 						featuring the world's largest online sheet music library; and Garritan, the leading provider of
 						quality virtual software instruments.
 					</div>
-					<div class="work-history-summary">Primary Responsibilities</div>
+					<!-- <div class="work-history-summary">Primary Responsibilities</div> -->
 					<ul>
 						<li>
 							Built, uploaded, provided QA, and released content for the MakeMusic Cloud content library.
@@ -226,6 +229,29 @@
 
 			<div class="section-content">
 				<div class="section-bar section-bar-even"></div>
+				<div class="certifications-content">
+					<div class="section-header">
+						<div class="icon-circle icon-circle-dark">
+							<div class="icon icon-dark">
+								<i class="material-icons">workspace_premium</i>
+							</div>
+						</div>
+						<div class="section-title">
+							CERTIFICATIONS
+						</div>
+					</div>
+					<a class="reference-link" href="https://www.linkedin.com/in/cj-garcia-music/details/certifications/" target="_blank">
+						<ul>
+							<li>LinkedIn Learning - 10 Course Flutter Development</li>
+							<li>Coursera - 3 Course Python Programming</li>
+							<li>Alphabet Accessibility Academy - Foundational Accessibility Knowledge</li>
+						</ul>
+					</a>
+				</div>
+			</div>
+
+			<div class="section-content">
+				<div class="section-bar section-bar-odd"></div>
 				<div class="work-history-content">
 					<div class="section-header">
 						<div class="icon-circle icon-circle-dark">
@@ -250,30 +276,26 @@
 				</div>
 			</div>
 		</div>
-		<div style="text-align: center; padding: 10px;">
-			<button onclick="createPDFfromHTML()">Download as PDF</button>
-		</div>
 	</div>
 	<div id="Projects" class="tab-content">
 		<div class="project-content">
-			<button class="collapsible">Angular</button>
-			<div class="content">
+			<button class="collapsible" onclick="columnClick(event)">Angular</button>
+			<div class="collapsible-content">
+				<p>
+					<a class="project-link" href="https://github.com/Google-SWE-DOL-CT" target="_blank">Google Software Engineering Apprenticeship Department of Labor Competency Tracker
+					</a>
+				</p>
+			</div>
+			<button class="collapsible" onclick="columnClick(event)">Flutter</button>
+			<div class="collapsible-content">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
 					et
 					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 					aliquip
 					ex ea commodo consequat.</p>
 			</div>
-			<button class="collapsible">Flutter</button>
-			<div class="content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-					et
-					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip
-					ex ea commodo consequat.</p>
-			</div>
-			<button class="collapsible">Web</button>
-			<div class="content">
+			<button class="collapsible" onclick="columnClick(event)">HTML/CSS/Javascript</button>
+			<div class="collapsible-content">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
 					et
 					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -378,9 +400,23 @@
 		color: var(--light-color);
 	}
 
+	.project-link {
+		font-size: 18px;
+		text-decoration: none;
+		color: var(--dark-color);
+		transition: var(--standard-transition-time) ease-in-out;
+	}
+
+	.project-link:hover {
+		color: var(--light-color);
+	}
+
 	.resume-content {
 		width: var(--content-width);
 		height: 1581px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		background-color: white;
 		padding: 10px;
 		margin-left: auto;
@@ -389,8 +425,8 @@
 
 	.project-content {
 		width: var(--content-width);
-		background-color: white;
-		padding: 10px;
+		background-color: var(--light-grey);
+		/* padding: 10px; */
 		margin-left: auto;
 		margin-right: auto;
 
@@ -502,7 +538,7 @@
 		display: flex;
 		flex-direction: row;
 		min-height: 40px;
-		margin: 40px 0px;
+		/* margin: 20px 0px; */
 	}
 
 	.skills-content {
@@ -554,6 +590,14 @@
 		transform: scale(1.1);
 		cursor: pointer;
 		opacity: 0.75;
+	}
+
+	.certifications-content {
+		display: flex;
+		flex-direction: column;
+		margin-left: 20px;
+		padding: 10px 90px 10px 10px;
+		width: 100%;
 	}
 
 	.work-history-content {
@@ -610,25 +654,27 @@
 	}
 
 	.collapsible {
-		background-color: #777;
-		color: white;
+		border-radius: 0px;
+		background-color: var(--light-grey);
+		color: var(--dark-color);
 		cursor: pointer;
 		padding: 18px;
 		width: 100%;
 		border: none;
 		text-align: left;
 		outline: none;
-		font-size: 15px;
+		font-size: 24px;
 	}
 
 	.collapsible-active,
 	.collapsible:hover {
-		background-color: #555;
+		background-color: var(--light-color);
+		color: #fff;
 	}
 
 	.collapsible:after {
 		content: '\002B';
-		color: white;
+		color: var(--dark-color);
 		font-weight: bold;
 		float: right;
 		margin-left: 5px;
@@ -636,14 +682,15 @@
 
 	.collapsible-active:after {
 		content: "\2212";
+		color: #fff;
 	}
 
-	.content {
+	.collapsible-content {
 		padding: 0 18px;
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
-		background-color: #f1f1f1;
+		background-color: var(--light-grey);
 	}
 </style>
 
@@ -659,15 +706,17 @@
 			tablinks[i].className = tablinks[i].className.replace(" active", "");
 		}
 		document.getElementById(sectionName).style.display = "block";
-		evt.currentTarget.className += " active";
+		if (evt.currentTarget != undefined) {
+			evt.currentTarget.className += " active";
+		}
 	}
 
 	function createPDFfromHTML() {
 		var HTML_Width = $(".resume-content").width();
 		var HTML_Height = $(".resume-content").height();
 		var top_left_margin = 15;
-		var PDF_Width = HTML_Width + (top_left_margin * 2);
-		var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
+		var PDF_Width = (HTML_Width + (top_left_margin * 2) / 2);
+		var PDF_Height = ((HTML_Height) + (top_left_margin * 2) / 2);
 		var canvas_image_width = HTML_Width;
 		var canvas_image_height = HTML_Height;
 
@@ -682,34 +731,40 @@
 				pdf.addPage(PDF_Width, PDF_Height);
 				pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 4), canvas_image_width, canvas_image_height);
 			}
-			pdf.save("CJ_Garcia_Resume.pdf");
+			var today = new Date();
+			var dd = String(today.getDate()).padStart(2, '0');
+			var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+			var yyyy = today.getFullYear();
+
+			today = mm + '_' + dd + '_' + yyyy;
+
+			pdf.save(`CJ_Garcia_Resume_${today}.pdf`);
 		});
 	}
 
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function () {
-			this.classList.toggle("collapsible-active");
-			var content = this.nextElementSibling;
-			if (content.style.maxHeight) {
-				content.style.maxHeight = null;
-			} else {
-				content.style.maxHeight = content.scrollHeight + "px";
-			}
-		});
+	function columnClick(event) {
+		var element = event.srcElement;
+		console.log(element);
+		element.classList.toggle("collapsible-active");
+		var content = element.nextElementSibling;
+		if (content.style.maxHeight) {
+			content.style.maxHeight = null;
+		} else {
+			content.style.maxHeight = content.scrollHeight + "px";
+		}
 	}
 
 	function navTo(evt) {
-		var coll = document.getElementsByClassName("collapsible");
+		var projectTab = document.getElementById("ProjectsTab");
+		openSection(projectTab, "Projects");
+		projectTab.className += " active";
 
+		var coll = document.getElementsByClassName("collapsible");
 		buttonText = evt.path[0].innerText;
 		for (var i = 0; i < coll.length; i++) {
 			if (coll[i].innerText == buttonText) {
-				coll[i].classList.add("collapsible-active");
-				var content = coll[i].nextElementSibling;
-				content.style.maxHeight = content.scrollHeight + "px";
+				// coll[i].classList.remove("collapsible-active");
+				coll[i].click();
 			} else {
 				coll[i].classList.remove("collapsible-active");
 				var content = coll[i].nextElementSibling;

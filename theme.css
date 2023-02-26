@@ -349,7 +349,7 @@ ul li::before {
     column-gap: 15px;
     font-size: 16px;
     font-style: italic;
-    margin: var(--standard-top-margin) 0px 10px 38px;
+    margin: 0 0px 10px 38px;
 }
 
 .reference-item {

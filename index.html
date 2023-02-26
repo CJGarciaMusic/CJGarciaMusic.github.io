@@ -15,6 +15,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 	<title>CJ Garcia's Resume</title>
 </head>
+
 <body>
 	<div class="tab">
 		<button id="ResumeTab" class="tablinks active" onclick="openSection(event, 'Resume')">Resume</button>
@@ -152,34 +153,46 @@
 						the
 						job experience.
 					</div>
+					<div>Play Points Project</div>
 					<ul>
 						<li>
-							Play Points Project - I implemented a feature that dynamically renders footer links on a
-							series
-							of five user facing pages. This removed redundancy in the displayed links and improved user
-							experience. The primary language used for this full stack feature was Java as
-							well as internal templating and rendering languages.
+							Implemented a feature that dynamically renders footer links on a series of five user facing
+							pages. This removed redundancy in the displayed links and improved user
+							experience.
+						</li>
+						<li>
+							The primary language used for this full stack feature was Java as well as internal
+							templating and rendering languages.
 						</li>
 					</ul>
 					<div class="work-hisotry-reference">
-						<a title="Click here to request references!" class="reference-link" href="mailto: cj.garcia.swe@gmail.com?subject=Play Points Reference Request&body=Hello CJ, I'd like to request your references from your Google Play Points team.">
+						<a title="Click here to request references!" class="reference-link"
+							href="mailto: cj.garcia.swe@gmail.com?subject=Play Points Reference Request&body=Hello CJ, I'd like to request your references from your Google Play Points team.">
 							References Availabile Upon Request
 						</a>
 					</div>
+					<div>
+						Core DevIntel Work
+					</div>
 					<ul>
 						<li>
-							Core DevIntel Work - I started off by contributing small updates to the front end and
-							quickly
-							transitioned into owning a whole UI and experience from implementation through launch. This
+							Contributed small updates to the front end
+						</li>
+						<li>
+							Quickly transitioned into owning a whole UI and experience from implementation through
+							launch.
+						</li>
+						<li>
 							contributed to getting features into the alpha launch of the application sooner than planned
-							giving the users
-							of the app more functionality and insights. This
-							work
-							has primarily been front end focused using Angular/Typescript with a Java based backend.
+							giving the users of the app more functionality and insights.
+						</li>
+							This work has primarily been front end focused using Angular/Typescript with a Java based
+							backend.
 						</li>
 					</ul>
 					<div class="work-hisotry-reference">
-						<a title="Click here to request references!" class="reference-link" href="mailto: cj.garcia.swe@gmail.com?subject=DevIntel Reference Request&body=Hello CJ, I'd like to request your references from your Google DevIntel team.">
+						<a title="Click here to request references!" class="reference-link"
+							href="mailto: cj.garcia.swe@gmail.com?subject=DevIntel Reference Request&body=Hello CJ, I'd like to request your references from your Google DevIntel team.">
 							References Availabile Upon Request
 						</a>
 					</div>
@@ -221,7 +234,8 @@
 						</li>
 					</ul>
 					<div class="work-hisotry-reference">
-						<a title="Click here to request references from MakeMusic" class="reference-link" href="mailto: cj.garcia.swe@gmail.com?subject=MakeMusic Reference Request&body=Hello CJ, I'd like to request your references from your MakeMusic experience.">
+						<a title="Click here to request references from MakeMusic" class="reference-link"
+							href="mailto: cj.garcia.swe@gmail.com?subject=MakeMusic Reference Request&body=Hello CJ, I'd like to request your references from your MakeMusic experience.">
 							References Availabile Upon Request
 						</a>
 					</div>
@@ -525,79 +539,79 @@
 </body>
 <script>
 	function openSection(evt, sectionName) {
-    var i, tabContent, tablinks;
-    tabContent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabContent.length; i++) {
-        tabContent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(sectionName).style.display = "block";
-    if (evt.currentTarget != undefined) {
-        evt.currentTarget.className += " active";
-    }
-}
+		var i, tabContent, tablinks;
+		tabContent = document.getElementsByClassName("tab-content");
+		for (i = 0; i < tabContent.length; i++) {
+			tabContent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(sectionName).style.display = "block";
+		if (evt.currentTarget != undefined) {
+			evt.currentTarget.className += " active";
+		}
+	}
 
-function createPDFfromHTML() {
-    var HTML_Width = $(".resume-content").width();
-    var HTML_Height = $(".resume-content").height();
-    var top_left_margin = 15;
-    var PDF_Width = (HTML_Width + (top_left_margin * 2) / 2);
-    var PDF_Height = ((HTML_Height) + (top_left_margin * 2) / 2);
-    var canvas_image_width = HTML_Width;
-    var canvas_image_height = HTML_Height;
+	function createPDFfromHTML() {
+		var HTML_Width = $(".resume-content").width();
+		var HTML_Height = $(".resume-content").height();
+		var top_left_margin = 15;
+		var PDF_Width = (HTML_Width + (top_left_margin * 2) / 2);
+		var PDF_Height = ((HTML_Height) + (top_left_margin * 2) / 2);
+		var canvas_image_width = HTML_Width;
+		var canvas_image_height = HTML_Height;
 
-    var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+		var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
 
-    html2canvas($(".resume-content")[0]).then(function (canvas) {
-        var imgData = canvas.toDataURL("image/jpeg", 1.0);
-        window.jsPDF = window.jspdf.jsPDF;
-        var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
-        pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
-        for (var i = 1; i <= totalPDFPages; i++) {
-            pdf.addPage(PDF_Width, PDF_Height);
-            pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 4), canvas_image_width, canvas_image_height);
-        }
-        var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        var yyyy = today.getFullYear();
+		html2canvas($(".resume-content")[0]).then(function (canvas) {
+			var imgData = canvas.toDataURL("image/jpeg", 1.0);
+			window.jsPDF = window.jspdf.jsPDF;
+			var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
+			pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+			for (var i = 1; i <= totalPDFPages; i++) {
+				pdf.addPage(PDF_Width, PDF_Height);
+				pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 4), canvas_image_width, canvas_image_height);
+			}
+			var today = new Date();
+			var dd = String(today.getDate()).padStart(2, '0');
+			var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+			var yyyy = today.getFullYear();
 
-        today = mm + '_' + dd + '_' + yyyy;
+			today = mm + '_' + dd + '_' + yyyy;
 
-        pdf.save(`CJ_Garcia_Resume_${today}.pdf`);
-    });
-}
+			pdf.save(`CJ_Garcia_Resume_${today}.pdf`);
+		});
+	}
 
-function columnClick(event) {
-    var element = event.srcElement;
-    element.classList.toggle("collapsible-active");
-    var content = element.nextElementSibling;
-    if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-    }
-}
+	function columnClick(event) {
+		var element = event.srcElement;
+		element.classList.toggle("collapsible-active");
+		var content = element.nextElementSibling;
+		if (content.style.maxHeight) {
+			content.style.maxHeight = null;
+		} else {
+			content.style.maxHeight = content.scrollHeight + "px";
+		}
+	}
 
-function navTo(evt) {
-    var projectTab = document.getElementById("ProjectsTab");
-    openSection(projectTab, "Projects");
-    projectTab.className += " active";
-    var coll = document.getElementsByClassName("collapsible");
-    buttonText = evt.path[0].id;
-    for (var i = 0; i < coll.length; i++) {
-        coll[i].classList.remove("collapsible-active");
-        var content = coll[i].nextElementSibling;
-        content.style.maxHeight = null;
-    }
-    for (var i = 0; i < coll.length; i++) {
-        if (coll[i].innerText == buttonText) {
-            coll[i].click();
-        }
-    }
-}
+	function navTo(evt) {
+		var projectTab = document.getElementById("ProjectsTab");
+		openSection(projectTab, "Projects");
+		projectTab.className += " active";
+		var coll = document.getElementsByClassName("collapsible");
+		buttonText = evt.path[0].id;
+		for (var i = 0; i < coll.length; i++) {
+			coll[i].classList.remove("collapsible-active");
+			var content = coll[i].nextElementSibling;
+			content.style.maxHeight = null;
+		}
+		for (var i = 0; i < coll.length; i++) {
+			if (coll[i].innerText == buttonText) {
+				coll[i].click();
+			}
+		}
+	}
 
 </script>

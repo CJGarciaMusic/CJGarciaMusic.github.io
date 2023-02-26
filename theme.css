@@ -7,6 +7,7 @@ body {
     --dark-color: #313c4e;
     --light-color: #449399;
     --standard-grey: #7c7c7c;
+    --darker-grey: #333;
     --light-grey: #ebebeb;
     --blue-tone: #beb8eb;
     --standard-transition-time: 0.3s;
@@ -324,7 +325,7 @@ ul li::before {
 .work-history-summary {
     font-size: 16px;
     font-style: italic;
-    color: var(--standard-grey);
+    color: var(--darker-grey);
     display: flex;
     flex-direction: row;
     justify-content: space-between;

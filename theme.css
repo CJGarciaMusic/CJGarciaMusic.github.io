@@ -335,7 +335,7 @@ ul li::before {
 }
 
 .work-history-section {
-    margin-top: var(--standard-top-margin);
+    margin: var(--standard-top-margin) 0 -10px 0;
 }
 
 .work-history-detail {

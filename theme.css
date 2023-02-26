@@ -11,6 +11,7 @@ body {
     --light-grey: #ebebeb;
     --blue-tone: #beb8eb;
     --standard-transition-time: 0.3s;
+    --standard-top-margin: 8px;
 }
 
 /* Style the tab */
@@ -333,6 +334,10 @@ ul li::before {
     margin: 5px 0px;
 }
 
+.work-history-section {
+    margin-top: var(--standard-top-margin);
+}
+
 .work-history-detail {
     font-size: 18px;
     color: #000;
@@ -344,7 +349,7 @@ ul li::before {
     column-gap: 15px;
     font-size: 16px;
     font-style: italic;
-    margin: -10px 0px 10px 38px;
+    margin: var(--standard-top-margin) 0px 10px 38px;
 }
 
 .reference-item {

@@ -603,7 +603,7 @@
 		openSection(projectTab, "Projects");
 		projectTab.className += " active";
 		var coll = document.getElementsByClassName("collapsible");
-		buttonText = evt.path[0].id;
+		buttonText = evt.srcElement.id;
 		for (var i = 0; i < coll.length; i++) {
 			coll[i].classList.remove("collapsible-active");
 			var content = coll[i].nextElementSibling;

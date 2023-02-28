@@ -29,12 +29,8 @@
 					<div class="name">CJ Garcia</div>
 					<div class="subtitle">Software Engineering Apprentice</div>
 					<div class="bio">
-						I am a frontend engineer with a proven track record of successfully taking designs from mock-ups
-						to
-						full implementation using a variety of modern frameworks. My interest in UX and expertise in
-						accessibility ensures that all of my work is user-friendly and inclusive. With a background in
-						music, I have honed my ability to think outside the box and come up with creative solutions
-						easily. For example, this resume was made with pure HTML/CSS!</div>
+						I am a frontend engineer with a proven track record of successfully taking designs from mock-ups to full implementation using a variety of modern frameworks. My interest in UX and expertise in accessibility ensures that all of my work is user-friendly and inclusive. With a background in music, I have honed my ability to think outside the box and come up with creative solutions easily. For example, this resume was made with pure HTML/CSS!
+					</div>
 				</div>
 				<a class="separator-dot" href="https://www.youtube.com/playlist?list=PL98CcgPc0OkNAn5iN40dLUHK3k4OKOchV"
 					target="_blank">
@@ -156,7 +152,7 @@
 					<div class="work-history-section">
 						Play Points Project
 					</div>
-					<ul>
+					<ul class="work-history-experience">
 						<li>
 							Implemented a feature that dynamically renders footer links on a series of five user facing
 							pages. This removed redundancy in the displayed links and improved user
@@ -176,7 +172,7 @@
 					<div class="work-history-section">
 						Core DevIntel Work
 					</div>
-					<ul>
+					<ul class="work-history-experience">
 						<li>
 							Contributed small updates to the front end
 						</li>
@@ -185,9 +181,10 @@
 							launch.
 						</li>
 						<li>
-							contributed to getting features into the alpha launch of the application sooner than planned
+							Contributed to getting features into the alpha launch of the application sooner than planned
 							giving the users of the app more functionality and insights.
 						</li>
+						<li>
 							This work has primarily been front end focused using Angular/Typescript with a Java based
 							backend.
 						</li>
@@ -216,7 +213,7 @@
 						featuring the world's largest online sheet music library; and Garritan, the leading provider of
 						quality virtual software instruments.
 					</div>
-					<ul>
+					<ul class="work-history-experience">
 						<li>
 							Built, uploaded, provided QA, and released content for the MakeMusic Cloud content library.
 						</li>
@@ -294,8 +291,9 @@
 				</div>
 			</div>
 		</div>
-		<div style="text-align: center; padding: 10px;">
-			<button onclick="createPDFfromHTML()">Download Resume as PDF</button>
+		<div style="text-align: center; margin: 10px;">
+			<!-- <button onclick="createTextPDF()">Download Resume as Text Only PDF</button> -->
+			<button onclick="createPDFfromHTML()">Download Resume as Image PDF</button>
 		</div>
 	</div>
 	<div id="Projects" class="tab-content">
@@ -554,6 +552,110 @@
 		if (evt.currentTarget != undefined) {
 			evt.currentTarget.className += " active";
 		}
+	}
+
+	function createTextPDF() {
+
+		window.jsPDF = window.jspdf.jsPDF
+		var textResume = new jsPDF({
+			orientation: 'p',
+			unit: 'in',
+			format: 'letter',
+			putOnlyUsedFonts: true,
+		});
+
+		var section_heading_size = 14;
+		var section_content_size = 10;
+
+		var name = document.getElementsByClassName("name")[0].innerHTML;
+		textResume.setFont("helvetica", "bold");
+		textResume.setFontSize(16);
+		textResume.text(name, 0.5, 0.5);
+
+		var subtitle = document.getElementsByClassName("subtitle")[0].innerHTML;
+		textResume.setFont("helvetica", "normal");
+		textResume.setFontSize(12);
+		textResume.text(subtitle, 0.5, 0.75);
+
+		var bio = document.getElementsByClassName("bio")[0].innerText;
+		textResume.setFontSize(section_content_size);
+		textResume.text(bio, 0.5, 1, {maxWidth: 5})
+
+		var contactInfo = document.getElementsByClassName("contact-row");
+		var email = contactInfo[0].innerText.replace("email\n", "");
+		var phone = contactInfo[1].innerText.replace("phone_android\n", "");
+		var location = contactInfo[2].innerText.replace("location_on\n", "");
+		var github = contactInfo[3].innerText;
+		textResume.setFontSize(section_content_size);
+		textResume.text(`Email: ${email}`, 8.0, 1, null, null, "right");
+		textResume.text(`Phone: ${phone}`, 8.0, 1.25, null, null, "right");
+		textResume.text(`Location: ${location}`, 8.0, 1.5, null, null, "right");
+		textResume.text(`GitHub: ${github}`, 8.0, 1.75, null, null, "right");
+		// textResume.text(`${email} • ${phone} • ${location}  • ${github}`, 4.25, 1, null, null, "center");
+
+		var skillsSection = document.getElementsByClassName("skills-content")[0].children;
+		var technicalSkills = skillsSection[1].innerText.replace("\n", " ").replaceAll("\n", ", ");
+		var durableSkills = skillsSection[2].innerText.replace("\n", " ").replaceAll("\n", ", ");
+
+		textResume.setFont("helvetica", "bold");
+		textResume.setFontSize(section_heading_size);
+		textResume.text("Skills", 0.5, 2.25);
+
+		textResume.setFont("helvetica", "normal");
+		textResume.setFontSize(12);
+		textResume.text(technicalSkills, 0.5, 2.5);
+		textResume.text(durableSkills, 0.5, 2.75);
+
+
+		var workHistoryTitle = document.getElementsByClassName("work-history-title");
+		var workHistoryCompany = document.getElementsByClassName("work-history-company");
+		var workHistorySummary = document.getElementsByClassName("work-history-summary");
+		var workHistorySection = document.getElementsByClassName("work-history-section");
+		var workHistoryExperience = document.getElementsByClassName("work-history-experience");
+
+		textResume.setFont("helvetica", "bold");
+		textResume.setFontSize(section_heading_size);
+		textResume.text("Work Experience", 0.5, 3.25);
+
+		textResume.setFont("helvetica", "normal");
+		textResume.setFontSize(12);
+		textResume.text(workHistoryTitle[0].innerText, 0.5, 3.5);
+
+		textResume.setFontSize(12);
+		textResume.text(workHistoryCompany[0].innerText, 0.5, 3.7);
+
+		textResume.setFont("helvetica", "italic");
+		textResume.setFontSize(section_content_size);
+		var googleTime = workHistorySummary[0].innerText.split("\n");
+		textResume.text(googleTime[0], 0.5, 3.9);
+		textResume.text(googleTime[1], 8, 3.9, null, null, "right");
+
+		textResume.text(workHistorySummary[1].innerText, 0.5, 4.15, {maxWidth: 7});
+
+		textResume.setFont("helvetica", "bold");
+		textResume.text(workHistorySection[0].innerText, 0.5, 4.6);
+
+		textResume.setFont("helvetica", "normal");
+		var playPointsExperience = workHistoryExperience[0].innerText.split("\n");
+		textResume.text("•", 0.9, 4.8);
+		textResume.text(playPointsExperience[0].trim(), 1, 4.8, {maxWidth: 6.5});
+		textResume.text("•", 0.9, 5.2);
+		textResume.text(playPointsExperience[1].trim(), 1, 5.2, {maxWidth: 6.5});
+
+		textResume.setFont("helvetica", "bold");
+		textResume.text(workHistorySection[1].innerText, 0.5, 5.6);
+
+		textResume.setFont("helvetica", "normal");
+		var devIntelExperience = workHistoryExperience[1].innerText.split("\n");
+		textResume.text("•", 0.9, 5.8);
+		textResume.text(devIntelExperience[0].trim(), 1, 5.8, {maxWidth: 6.5});
+		textResume.text("•", 0.9, 6.0);
+		textResume.text(devIntelExperience[1].trim(), 1, 6.0, {maxWidth: 6.5});
+
+
+
+		textResume.save(`text_test.pdf`);
+
 	}
 
 	function createPDFfromHTML() {

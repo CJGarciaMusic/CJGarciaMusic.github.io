@@ -407,3 +407,13 @@ ul li::before {
     margin: 5px;
     padding: 0px 5px;
 }
+
+.download-buttons {
+    width: var(--content-width);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -802,9 +802,7 @@
 		textResume.text(educationDetails[0], left_margin, distance_current);
 		textResume.text(educationDetails[1], right_margin, distance_current, null, null, "right");
 
-
-		textResume.save(`text_test.pdf`);
-
+		textResume.save(`CJ_Garcia_Resume_Text_${today}.pdf`);
 	}
 
 	function createPDFfromHTML() {
@@ -834,7 +832,7 @@
 
 			today = mm + '_' + dd + '_' + yyyy;
 
-			pdf.save(`CJ_Garcia_Resume_${today}.pdf`);
+			pdf.save(`CJ_Garcia_Resume_Image_${today}.pdf`);
 		});
 	}
 

@@ -29,7 +29,11 @@
 					<div class="name">CJ Garcia</div>
 					<div class="subtitle">Software Engineering Apprentice</div>
 					<div class="bio">
-						I am a frontend engineer with a proven track record of successfully taking designs from mock-ups to full implementation using a variety of modern frameworks. My interest in UX and expertise in accessibility ensures that all of my work is user-friendly and inclusive. With a background in music, I have honed my ability to think outside the box and come up with creative solutions easily. For example, this resume was made with pure HTML/CSS!
+						I am a frontend engineer with a proven track record of successfully taking designs from mock-ups
+						to full implementation using a variety of modern frameworks. My interest in UX and expertise in
+						accessibility ensures that all of my work is user-friendly and inclusive. With a background in
+						music, I have honed my ability to think outside the box and come up with creative solutions
+						easily. For example, this resume was made with pure HTML/CSS!
 					</div>
 				</div>
 				<a class="separator-dot" href="https://www.youtube.com/playlist?list=PL98CcgPc0OkNAn5iN40dLUHK3k4OKOchV"
@@ -145,7 +149,8 @@
 					</div>
 					<div class="work-history-summary">
 						This apprenticeship program is designed to help people with nontraditional backgrounds
-						learn how to become a software engineer with both industry standard projects through Multiverse as well as on
+						learn how to become a software engineer with both industry standard projects through Multiverse
+						as well as on
 						the
 						job experience at Google.
 					</div>
@@ -538,6 +543,13 @@
 	</div>
 </body>
 <script>
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = mm + '_' + dd + '_' + yyyy;
+
 	function openSection(evt, sectionName) {
 		var i, tabContent, tablinks;
 		tabContent = document.getElementsByClassName("tab-content");
@@ -608,7 +620,7 @@
 		var bio = document.getElementsByClassName("bio")[0].innerText;
 		increaseCurrent(distance_25);
 		textResume.setFontSize(section_content_size);
-		textResume.text(bio, left_margin, distance_current, {maxWidth: 5})
+		textResume.text(bio, left_margin, distance_current, { maxWidth: 5 })
 
 		var contactInfo = document.getElementsByClassName("contact-row");
 		var email = contactInfo[0].innerText.replace("email\n", "");
@@ -616,7 +628,7 @@
 		var location = contactInfo[2].innerText.replace("location_on\n", "");
 		var github = contactInfo[3].innerText;
 		textResume.setFontSize(section_content_size);
-	
+
 		textResume.text(`Email: ${email}`, right_margin, distance_current, null, null, "right");
 		increaseCurrent(distance_25);
 		textResume.text(`Phone: ${phone}`, right_margin, distance_current, null, null, "right");
@@ -626,7 +638,7 @@
 		textResume.text(`GitHub: ${github}`, right_margin, distance_current, null, null, "right");
 		// textResume.text(`${email} • ${phone} • ${location}  • ${github}`, 4.25, 1, null, null, "center");
 
-		textResume.line(left_margin, distance_current+0.12, right_margin, distance_current+0.12);
+		textResume.line(left_margin, distance_current + 0.12, right_margin, distance_current + 0.12);
 
 		var skillsSection = document.getElementsByClassName("skills-content")[0].children;
 		var technicalSkills = skillsSection[1].innerText.replace("\n", " ").replaceAll("\n", ", ");
@@ -636,13 +648,13 @@
 		textResume.setFont("helvetica", "bold");
 		textResume.setFontSize(section_heading_size);
 		textResume.text("Skills", left_margin, distance_current);
-		
+
 		increaseCurrent(distance_20);
 		textResume.setFont("helvetica", "normal");
 		textResume.setFontSize(section_subheader_size);
 		// TODO: technical skills breakout
 		textResume.text(technicalSkills, left_margin, distance_current);
-		
+
 		increaseCurrent(distance_20);
 		textResume.text(durableSkills, left_margin, distance_current);
 
@@ -652,7 +664,7 @@
 		var workHistorySection = document.getElementsByClassName("work-history-section");
 		var workHistoryExperience = document.getElementsByClassName("work-history-experience");
 
-		textResume.line(left_margin, distance_current+0.12, right_margin, distance_current+0.12);
+		textResume.line(left_margin, distance_current + 0.12, right_margin, distance_current + 0.12);
 
 		increaseCurrent(distance_35);
 		textResume.setFont("helvetica", "bold");
@@ -676,7 +688,7 @@
 		textResume.text(googleTime[1], right_margin, distance_current, null, null, "right");
 
 		increaseCurrent(distance_20);
-		textResume.text(workHistorySummary[1].innerText, left_margin, distance_current, {maxWidth: 7.2});
+		textResume.text(workHistorySummary[1].innerText, left_margin, distance_current, { maxWidth: 7.2 });
 
 		increaseCurrent(distance_40);
 		textResume.setFont("helvetica", "bold");
@@ -686,11 +698,11 @@
 		textResume.setFont("helvetica", "normal");
 		var playPointsExperience = workHistoryExperience[0].innerText.split("\n");
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(playPointsExperience[0].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(playPointsExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 		increaseCurrent(distance_35);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(playPointsExperience[1].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(playPointsExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 		increaseCurrent(distance_45);
 		textResume.setFont("helvetica", "bold");
@@ -700,19 +712,19 @@
 		textResume.setFont("helvetica", "normal");
 		var devIntelExperience = workHistoryExperience[1].innerText.split("\n");
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devIntelExperience[0].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
-		
+		textResume.text(devIntelExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+
 		increaseCurrent(distance_20);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devIntelExperience[1].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
-		
+		textResume.text(devIntelExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+
 		increaseCurrent(distance_20);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devIntelExperience[2].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
-		
+		textResume.text(devIntelExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+
 		increaseCurrent(distance_35);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devIntelExperience[3].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(devIntelExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 		increaseCurrent(distance_30);
 		textResume.setFont("helvetica", "bold");
@@ -731,8 +743,8 @@
 		textResume.text(makeMusicTime[1], right_margin, distance_current, null, null, "right");
 
 		increaseCurrent(distance_20);
-		textResume.text(workHistorySummary[3].innerText, left_margin, distance_current, {maxWidth: 7.2});
-		
+		textResume.text(workHistorySummary[3].innerText, left_margin, distance_current, { maxWidth: 7.2 });
+
 		increaseCurrent(distance_50 + distance_05);
 		textResume.setFont("helvetica", "bold");
 		textResume.text("Repertoire Development", left_margin, distance_current);
@@ -741,21 +753,21 @@
 		textResume.setFont("helvetica", "normal");
 		var makeMusicExperience = workHistoryExperience[2].innerText.split("\n");
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[0].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(makeMusicExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 		increaseCurrent(distance_20);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[1].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(makeMusicExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 		increaseCurrent(distance_35);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[2].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(makeMusicExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 		increaseCurrent(distance_35);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[3].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(makeMusicExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-		textResume.line(left_margin, distance_current+distance_40, right_margin, distance_current+distance_40);
+		textResume.line(left_margin, distance_current + distance_40, right_margin, distance_current + distance_40);
 
 		increaseCurrent(distance_50 + distance_10);
 		textResume.setFont("helvetica", "bold");
@@ -769,17 +781,17 @@
 		textResume.setFont("helvetica", "normal");
 		textResume.setFontSize(section_content_size);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(certs[0].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(certs[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 		increaseCurrent(distance_20);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(certs[1].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(certs[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 		increaseCurrent(distance_20);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(certs[2].trim(), indent_margin, distance_current, {maxWidth: 7.2 - indent_margin});
+		textResume.text(certs[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-		textResume.line(left_margin, distance_current+distance_10, right_margin, distance_current+distance_10);
+		textResume.line(left_margin, distance_current + distance_10, right_margin, distance_current + distance_10);
 
 		increaseCurrent(distance_30);
 		textResume.setFont("helvetica", "bold");
@@ -825,12 +837,6 @@
 				pdf.addPage(PDF_Width, PDF_Height);
 				pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 4), canvas_image_width, canvas_image_height);
 			}
-			var today = new Date();
-			var dd = String(today.getDate()).padStart(2, '0');
-			var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-			var yyyy = today.getFullYear();
-
-			today = mm + '_' + dd + '_' + yyyy;
 
 			pdf.save(`CJ_Garcia_Resume_Image_${today}.pdf`);
 		});

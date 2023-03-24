@@ -66,6 +66,7 @@ button.active {
 ul {
     list-style: none;
     font-size: var(--small-font-size);
+    margin-top: 0px;
 }
 
 ul li::before {
@@ -348,8 +349,7 @@ ul li::before {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    /* margin: 5px 0px 0px 33px; */
+    /* width: 100%; */
 }
 
 work-history-experience {
@@ -357,7 +357,6 @@ work-history-experience {
 }
 
 .work-history-section {
-    margin-top: var(--standard-top-margin);
     font-size: var(--medium-font-size);
 }
 
@@ -370,9 +369,8 @@ work-history-experience {
     display: flex;
     flex-direction: row;
     column-gap: 15px;
-    font-size: 16px;
+    font-size: var(--small-font-size);
     font-style: italic;
-    margin: 0 0px 10px 38px;
 }
 
 .reference-item {

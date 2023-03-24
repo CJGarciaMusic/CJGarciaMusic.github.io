@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="https://cjgarciamusic.github.io/theme.css">
+	<link rel="stylesheet" type="text/css" href="theme.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="https://cjgarciamusic.github.io/theme.css"> -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,56 +28,49 @@
 				<div class="section-bar section-bar-odd"></div>
 				<div class="general-info">
 					<div class="name">CJ Garcia</div>
-					<div class="subtitle">Software Engineering Apprentice</div>
-					<div class="bio">
-						I am a frontend engineer with a proven track record of successfully taking designs from mock-ups
-						to full implementation using a variety of modern frameworks. My interest in UX and expertise in
-						accessibility ensures that all of my work is user-friendly and inclusive. With a background in
-						music, I have honed my ability to think outside the box and come up with creative solutions
-						easily. For example, this resume was made with pure HTML/CSS!
+					<div class="subtitle">Software Engineer</div>
+					<div class="contact">
+						<div class="contact-row">
+							<div class="icon-circle icon-circle-dark">
+								<div class="icon icon-light">
+									<i class="material-icons">email</i>
+								</div>
+							</div>
+							<a href="mailto: cj.garcia.swe@gmail.com" class="dark-link">
+								cj.garcia.swe@gmail.com
+							</a>
+						</div>
+						<div class="contact-row">
+							<div class="icon-circle icon-circle-dark">
+								<div class="icon icon-light">
+									<i class="material-icons">phone_android</i>
+								</div>
+							</div>
+							<div>303-725-3506</div>
+						</div>
+						<div class="contact-row">
+							<div class="icon-circle icon-circle-dark">
+								<div class="icon icon-light">
+									<i class="material-icons">location_on</i>
+								</div>
+							</div>
+							<div>Atlanta, GA</div>
+						</div>
+						<div class="contact-row">
+							<div class="icon-circle icon-circle-dark">
+								<div class="icon icon-light">
+									<i class="fa fa-github fa-sm" style="font-size: 24px;"></i>
+								</div>
+							</div>
+							<a href="http://www.github.com/CJGarciaMusic" target="_blank" class="dark-link">
+								github.com/CJGarciaMusic
+							</a>
+						</div>
 					</div>
 				</div>
-				<a class="separator-dot" href="https://www.youtube.com/playlist?list=PL98CcgPc0OkNAn5iN40dLUHK3k4OKOchV"
+				<!-- <a class="separator-dot" href="https://www.youtube.com/playlist?list=PL98CcgPc0OkNAn5iN40dLUHK3k4OKOchV"
 					target="_blank">
-				</a>
-				<div class="contact">
-					<div class="contact-row">
-						<div class="icon-circle icon-circle-light">
-							<div class="icon icon-light">
-								<i class="material-icons">email</i>
-							</div>
-						</div>
-						<a href="mailto: cj.garcia.swe@gmail.com" class="blank-link">
-							cj.garcia.swe@gmail.com
-						</a>
-					</div>
-					<div class="contact-row">
-						<div class="icon-circle icon-circle-light">
-							<div class="icon icon-light">
-								<i class="material-icons">phone_android</i>
-							</div>
-						</div>
-						<div>303-725-3506</div>
-					</div>
-					<div class="contact-row">
-						<div class="icon-circle icon-circle-light">
-							<div class="icon icon-light">
-								<i class="material-icons">location_on</i>
-							</div>
-						</div>
-						<div>Atlanta, GA</div>
-					</div>
-					<div class="contact-row">
-						<div class="icon-circle icon-circle-light">
-							<div class="icon icon-light">
-								<i class="fa fa-github" style="font-size: 24px;"></i>
-							</div>
-						</div>
-						<a href="http://www.github.com/CJGarciaMusic" target="_blank" class="blank-link">
-							github.com/CJGarciaMusic
-						</a>
-					</div>
-				</div>
+				</a> -->
 			</div>
 
 			<div class="section-content">
@@ -93,7 +87,7 @@
 						</div>
 					</div>
 					<div class="skill-list">
-						<div class="skill-type">Technical:</div>
+						<div class="skill-type indent">Technical:</div>
 						<div id="Angular" class="single-skill" onclick="navTo(event)">Angular</div>
 						<div id="Angular" class="single-skill" onclick="navTo(event)">TypeScript</div>
 						<div id="Flutter" class="single-skill" onclick="navTo(event)">Flutter</div>
@@ -104,7 +98,7 @@
 						<div id="Lua" class="single-skill" onclick="navTo(event)">Lua</div>
 					</div>
 					<div class="skill-list">
-						<div class="skill-type">Durable:</div>
+						<div class="skill-type indent">Durable:</div>
 						<div class="single-skill">Public Speaking</div>
 						<a class="skill-link" href="https://youtu.be/KLqLT7bFqRA" target="_blank">
 							<div class="single-skill">
@@ -137,47 +131,29 @@
 						</div>
 					</div>
 
-					<div class="work-history-title">Software Engineering Apprentice</div>
-					<div class="work-history-company">Google</div>
-					<div class="work-history-summary">
-						<div>
-							10/2021 - Present
-						</div>
-						<div>
-							Atlanta, GA
+					<div class="work-history-title indent">Software Engineering Apprentice</div>
+					<div class="work-history-company indent">Google</div>
+					<div class="indent">
+						<div class="work-history-summary">
+							<div>
+								10/2021 - 6/2023
+							</div>
+							<div>
+								Atlanta, GA
+							</div>
 						</div>
 					</div>
-					<div class="work-history-summary">
+					<!-- <div class="work-history-summary">
 						This apprenticeship program is designed to help people with nontraditional backgrounds
 						learn how to become a software engineer with both industry standard projects through Multiverse
 						as well as on
 						the
 						job experience at Google.
-					</div>
-					<div class="work-history-section">
-						Play Points Project
-					</div>
-					<ul class="work-history-experience">
-						<li>
-							Implemented a feature that dynamically renders footer links on a series of five user facing
-							pages. This removed redundancy in the displayed links and improved user
-							experience.
-						</li>
-						<li>
-							The primary language used for this full stack feature was Java as well as internal
-							templating and rendering languages.
-						</li>
-					</ul>
-					<div class="work-hisotry-reference">
-						<a title="Click here to request references!" class="reference-link"
-							href="mailto: cj.garcia.swe@gmail.com?subject=Play Points Reference Request&body=Hello CJ, I'd like to request your references from your Google Play Points team.">
-							References Availabile Upon Request
-						</a>
-					</div>
-					<div class="work-history-section">
+					</div> -->
+					<div class="work-history-section indent">
 						Core DevIntel Work
 					</div>
-					<ul class="work-history-experience">
+					<ul class="work-history-experience indent">
 						<li>
 							Contributed small updates to the front end
 						</li>
@@ -200,6 +176,26 @@
 							References Availabile Upon Request
 						</a>
 					</div>
+					<div class="work-history-section">
+						Play Points Project
+					</div>
+					<ul class="work-history-experience">
+						<li>
+							Implemented a feature that dynamically renders footer links on a series of five user facing
+							pages. This removed redundancy in the displayed links and improved user
+							experience.
+						</li>
+						<li>
+							The primary language used for this full stack feature was Java as well as internal
+							templating and rendering languages.
+						</li>
+					</ul>
+					<div class="work-hisotry-reference">
+						<a title="Click here to request references!" class="reference-link"
+							href="mailto: cj.garcia.swe@gmail.com?subject=Play Points Reference Request&body=Hello CJ, I'd like to request your references from your Google Play Points team.">
+							References Availabile Upon Request
+						</a>
+					</div>
 
 					<div class="work-history-title">Music Production Engineer</div>
 					<div class="work-history-company">MakeMusic</div>
@@ -211,13 +207,13 @@
 							Boulder, CO
 						</div>
 					</div>
-					<div class="work-history-summary">
+					<!-- <div class="work-history-summary">
 						MakeMusic, Inc. is a music technology company comprised of Finale, the world's best-selling
 						music
 						notation software; MakeMusic Cloud, formerly SmartMusic, an interactive practice application
 						featuring the world's largest online sheet music library; and Garritan, the leading provider of
 						quality virtual software instruments.
-					</div>
+					</div> -->
 					<ul class="work-history-experience">
 						<li>
 							Built, uploaded, provided QA, and released content for the MakeMusic Cloud content library.

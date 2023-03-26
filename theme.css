@@ -114,8 +114,23 @@ ul li::before {
     color: var(--light-color);
 }
 
+.project-title-link {
+    font-size: var(--medium-font-size);
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: var(--standard-transition-time) ease-in-out;
+}
+
+.project-title-link:hover {
+    color: var(--light-color);
+}
+
+.project-description {
+    font-size: var(--medium-font-size);
+}
+
 .project-link {
-    font-size: 20px;
+    font-size: var(--small-font-size);
     text-decoration: none;
     color: var(--dark-color);
     transition: var(--standard-transition-time) ease-in-out;
@@ -151,7 +166,7 @@ ul li::before {
 }
 
 .section-bar {
-    width: 14px;
+    width: 8px;
     border-radius: var(--standard-radius);
 }
 
@@ -266,8 +281,6 @@ ul li::before {
     flex-direction: column;
     justify-content: space-between;
     row-gap: 5px;
-    /* margin-left: 3px; */
-    padding: 6px;
 }
 
 .section-header {
@@ -319,15 +332,12 @@ ul li::before {
 .certifications-content {
     display: flex;
     flex-direction: column;
-    margin-left: 3px;
-    padding: 10px 90px 10px 10px;
     width: 100%;
 }
 
 .work-history-content {
     display: flex;
     flex-direction: column;
-    margin-left: 3px;
     width: 100%;
 }
 
@@ -353,15 +363,15 @@ ul li::before {
     /* width: 100%; */
 }
 
-work-history-experience {
+.work-history-experience {
+    margin-top: 4px;
     font-size: var(--small-font-size);
 }
 
 .work-history-section {
-    margin-top: 4px;
-    margin-bottom: 4px;
     font-size: var(--medium-font-size);
 }
+
 
 .work-history-detail {
     font-size: var(--small-font-size);
@@ -369,19 +379,14 @@ work-history-experience {
 }
 
 .work-hisotry-reference {
-    display: flex;
-    flex-direction: row;
-    column-gap: 15px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     font-size: var(--small-font-size);
     font-style: italic;
 }
 
 .reference-item {
     color: var(--standard-grey);
-}
-
-.reference-item:last-child {
-    color: #000;
 }
 
 .collapsible {

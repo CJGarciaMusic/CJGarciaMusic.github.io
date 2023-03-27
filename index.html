@@ -245,7 +245,13 @@
 						</div>
 						<ul class="work-history-experience indent">
 							<li>
-								Built, uploaded, provided QA, and released content for the MakeMusic Cloud content library.
+								Created a suite of OS agnostic automation scripts that removed the reliability on external
+								software, automated tasks for a number of applications including Finale, Digital Performer,
+								Preview, and ran refactored Bash scripts for interacting with the SVN server.
+							</li>
+							<li>
+								Mentored coworkers on best practices and continue to lead those efforts by creating training
+								materials and training sessions.
 							</li>
 							<li>
 								Updated then created a new department wiki for documentation of processes and a central
@@ -253,13 +259,7 @@
 								reference.
 							</li>
 							<li>
-								Mentored coworkers on best practices and continue to lead those efforts by creating training
-								materials and training sessions.
-							</li>
-							<li>
-								Created a suite of OS agnostic automation scripts that removed the reliability on external
-								software, automated tasks for a number of applications including Finale, Digital Performer,
-								Preview, and ran refactored Bash scripts for interacting with the SVN server.
+								Built, uploaded, provided QA, and released content for the MakeMusic Cloud content library.
 							</li>
 						</ul>
 						<div class="work-hisotry-reference indent">
@@ -799,21 +799,21 @@
 		textResume.text("•", indent_dot, distance_current);
 		textResume.text(makeMusicExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		increaseCurrent(list_one_line);
+		increaseCurrent(distance_50);
 		textResume.text("•", indent_dot, distance_current);
 		textResume.text(makeMusicExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		increaseCurrent(list_one_line);
+		increaseCurrent(list_two_line);
 		textResume.text("•", indent_dot, distance_current);
 		textResume.text(makeMusicExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		increaseCurrent(list_two_line);
+		increaseCurrent(list_one_line);
 		textResume.text("•", indent_dot, distance_current);
 		textResume.text(makeMusicExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		textResume.line(left_margin, distance_current + distance_40, right_margin, distance_current + distance_40);
+		textResume.line(left_margin, distance_current + 0.06, right_margin, distance_current + 0.06);
 
-		increaseCurrent(distance_50 + distance_10);
+		increaseCurrent(distance_25);
 		textResume.setFont("helvetica", "bold");
 		textResume.setFontSize(section_heading_size);
 		textResume.text("Certifications", left_margin, distance_current);

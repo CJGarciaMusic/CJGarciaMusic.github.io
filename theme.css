@@ -56,6 +56,11 @@ button.active {
     color: #fff;
 }
 
+:focus {
+    border: 1px solid var(--light-grey);
+    border-radius: var(--standard-radius);
+}
+
 /* Style the tab content */
 .tab-content {
     display: none;
@@ -247,7 +252,8 @@ ul li::before {
 }
 
 .fa-sm{
-    font-size:18px !important;
+    font-size: 18px !important;
+    transform: translateY(1px);
 };
 
 .icon-light {

@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="https://cjgarciamusic.github.io/theme.css">
+	<link rel="stylesheet" type="text/css" href="theme.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="https://cjgarciamusic.github.io/theme.css"> -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,56 +28,49 @@
 				<div class="section-bar section-bar-odd"></div>
 				<div class="general-info">
 					<div class="name">CJ Garcia</div>
-					<div class="subtitle">Software Engineering Apprentice</div>
-					<div class="bio">
-						I am a frontend engineer with a proven track record of successfully taking designs from mock-ups
-						to full implementation using a variety of modern frameworks. My interest in UX and expertise in
-						accessibility ensures that all of my work is user-friendly and inclusive. With a background in
-						music, I have honed my ability to think outside the box and come up with creative solutions
-						easily. For example, this resume was made with pure HTML/CSS!
+					<div class="subtitle">Software Engineer</div>
+					<div class="contact">
+						<div class="contact-row">
+							<div class="icon-circle icon-circle-dark">
+								<div class="icon icon-light">
+									<i class="material-icons">email</i>
+								</div>
+							</div>
+							<a href="mailto: cj.garcia.swe@gmail.com" class="dark-link">
+								cj.garcia.swe@gmail.com
+							</a>
+						</div>
+						<div class="contact-row">
+							<div class="icon-circle icon-circle-dark">
+								<div class="icon icon-light">
+									<i class="material-icons">phone_android</i>
+								</div>
+							</div>
+							<div>470-485-4615</div>
+						</div>
+						<div class="contact-row">
+							<div class="icon-circle icon-circle-dark">
+								<div class="icon icon-light">
+									<i class="material-icons">location_on</i>
+								</div>
+							</div>
+							<div>Atlanta, GA</div>
+						</div>
+						<div class="contact-row">
+							<div class="icon-circle icon-circle-dark">
+								<div class="icon icon-light">
+									<i class="fa fa-github fa-sm" style="font-size: 24px;"></i>
+								</div>
+							</div>
+							<a href="http://www.github.com/CJGarciaMusic" target="_blank" class="dark-link">
+								github.com/CJGarciaMusic
+							</a>
+						</div>
 					</div>
 				</div>
-				<a class="separator-dot" href="https://www.youtube.com/playlist?list=PL98CcgPc0OkNAn5iN40dLUHK3k4OKOchV"
+				<!-- <a class="separator-dot" href="https://www.youtube.com/playlist?list=PL98CcgPc0OkNAn5iN40dLUHK3k4OKOchV"
 					target="_blank">
-				</a>
-				<div class="contact">
-					<div class="contact-row">
-						<div class="icon-circle icon-circle-light">
-							<div class="icon icon-light">
-								<i class="material-icons">email</i>
-							</div>
-						</div>
-						<a href="mailto: cj.garcia.swe@gmail.com" class="blank-link">
-							cj.garcia.swe@gmail.com
-						</a>
-					</div>
-					<div class="contact-row">
-						<div class="icon-circle icon-circle-light">
-							<div class="icon icon-light">
-								<i class="material-icons">phone_android</i>
-							</div>
-						</div>
-						<div>303-725-3506</div>
-					</div>
-					<div class="contact-row">
-						<div class="icon-circle icon-circle-light">
-							<div class="icon icon-light">
-								<i class="material-icons">location_on</i>
-							</div>
-						</div>
-						<div>Atlanta, GA</div>
-					</div>
-					<div class="contact-row">
-						<div class="icon-circle icon-circle-light">
-							<div class="icon icon-light">
-								<i class="fa fa-github" style="font-size: 24px;"></i>
-							</div>
-						</div>
-						<a href="http://www.github.com/CJGarciaMusic" target="_blank" class="blank-link">
-							github.com/CJGarciaMusic
-						</a>
-					</div>
-				</div>
+				</a> -->
 			</div>
 
 			<div class="section-content">
@@ -93,7 +87,7 @@
 						</div>
 					</div>
 					<div class="skill-list">
-						<div class="skill-type">Technical:</div>
+						<div class="skill-type indent">Technical:</div>
 						<div id="Angular" class="single-skill" onclick="navTo(event)">Angular</div>
 						<div id="Angular" class="single-skill" onclick="navTo(event)">TypeScript</div>
 						<div id="Flutter" class="single-skill" onclick="navTo(event)">Flutter</div>
@@ -102,9 +96,11 @@
 						</div>
 						<div id="Java" class="single-skill" onclick="navTo(event)">Java</div>
 						<div id="Lua" class="single-skill" onclick="navTo(event)">Lua</div>
+						<div class="single-skill">React</div>
+						<div class="single-skill">RxJs</div>
 					</div>
 					<div class="skill-list">
-						<div class="skill-type">Durable:</div>
+						<div class="skill-type indent">Durable:</div>
 						<div class="single-skill">Public Speaking</div>
 						<a class="skill-link" href="https://youtu.be/KLqLT7bFqRA" target="_blank">
 							<div class="single-skill">
@@ -137,73 +133,106 @@
 						</div>
 					</div>
 
-					<div class="work-history-title">Software Engineering Apprentice</div>
-					<div class="work-history-company">Google</div>
-					<div class="work-history-summary">
-						<div>
-							10/2021 - Present
+					<div class="work-history-title indent">Software Engineering Apprentice</div>
+					<div class="work-history-company indent">Google</div>
+					<div class="indent">
+						<div class="work-history-summary">
+							<div>
+								10/2021 - 6/2023
+							</div>
+							<div>
+								Atlanta, GA
+							</div>
 						</div>
-						<div>
-							Atlanta, GA
-						</div>
 					</div>
-					<div class="work-history-summary">
-						This apprenticeship program is designed to help people with nontraditional backgrounds
-						learn how to become a software engineer with both industry standard projects through Multiverse
-						as well as on
-						the
-						job experience at Google.
+					<div class="work-history-section indent">
+						<b>Team: </b>DevIntel (Google Core) - <b>Project: </b>Internal Application
 					</div>
-					<div class="work-history-section">
-						Play Points Project
-					</div>
-					<ul class="work-history-experience">
+					<ul class="work-history-experience indent">
 						<li>
-							Implemented a feature that dynamically renders footer links on a series of five user facing
-							pages. This removed redundancy in the displayed links and improved user
-							experience.
+							Spearheaded the delivery of key front end features for the alpha launch of an internal
+							application, accelerating the timeline of those features by one quarter and contributing to
+							26 production commits. 
+							<ul>
+								<li>
+									Leveraged advanced Angular/Typescript expertise to deliver
+									high-quality code that improved the overall performance, scalability, and maintainability of
+									the application.
+								</li>
+							</ul>
 						</li>
 						<li>
-							The primary language used for this full stack feature was Java as well as internal
-							templating and rendering languages.
+							Collaborated closely with the UX team to ensure that custom and modified components aligned
+							with the Figma mockups and enhanced the user experience across the application, resulting in
+							a delta of 3355 lines of code.
+						</li>
+						<li>
+							Demonstrated exceptional creativity and problem-solving skills by developing innovative
+							solutions to complex design challenges.
+							<ul>
+								<li>
+									Used a range of tools, frameworks, and knowledge,
+									including Material UI and a Java-based backend, to optimize the performance and
+									functionality of the application.
+								</li>
+							</ul>
+						</li>
+						<li>
+							Actively participated in all team meetings, including daily standups, bi-weekly demos, and
+							sprint retrospectives.
+							<ul>
+								<li>Provided valuable insights and feedback on completed work, and collaborated with
+									team members to identify and resolve potential roadblocks to project success.
+								</li>
+								<li>Consistently demonstrated strong communication skills, fostering a positive and
+									productive team environment.
+								</li>
+							</ul>
 						</li>
 					</ul>
-					<div class="work-hisotry-reference">
-						<a title="Click here to request references!" class="reference-link"
-							href="mailto: cj.garcia.swe@gmail.com?subject=Play Points Reference Request&body=Hello CJ, I'd like to request your references from your Google Play Points team.">
-							References Availabile Upon Request
-						</a>
-					</div>
-					<div class="work-history-section">
-						Core DevIntel Work
-					</div>
-					<ul class="work-history-experience">
-						<li>
-							Contributed small updates to the front end
-						</li>
-						<li>
-							Quickly transitioned into owning a whole UI and experience from implementation through
-							launch.
-						</li>
-						<li>
-							Contributed to getting features into the alpha launch of the application sooner than planned
-							giving the users of the app more functionality and insights.
-						</li>
-						<li>
-							This work has primarily been front end focused using Angular/Typescript with a Java based
-							backend.
-						</li>
-					</ul>
-					<div class="work-hisotry-reference">
+					<div class="work-hisotry-reference indent">
 						<a title="Click here to request references!" class="reference-link"
 							href="mailto: cj.garcia.swe@gmail.com?subject=DevIntel Reference Request&body=Hello CJ, I'd like to request your references from your Google DevIntel team.">
 							References Availabile Upon Request
 						</a>
 					</div>
+					<div class="work-history-section indent">
+						<b>Team: </b>Loyalty Partnerships & Expereinces (Google Play) - <b>Project: </b>Play Points Web UI
+					</div>
+					<ul class="work-history-experience indent">
+						<li>
+							Implementated a full-stack feature that dynamically renders footer links on five user-facing pages, resulting in a more streamlined and user-friendly experience for billions of users.
+							<ul>
+								<li>
+									Leveraged expertise in Java and internal templating and rendering languages to deliver high-quality code that improved the overall performance and functionality of the feature.
+								</li>
+								<li>
+									Contributed 18 production commits, totaling 558 lines of code added, 7 lines of code deleted, and 54 lines of code changed, to the development of the feature.
+								</li>
+								<li>
+									Demonstrated exceptional attention to detail and adherence to best practices throughout the development process, resulting in a robust and reliable feature.
+								</li>
+							</ul> 
+						</li>
+						<li>
+							Communicated frequently with the UX team to ensure that the dynamic rendering of footer links aligned with the overall design and branding of the application.
+							<ul>
+								<li>
+									Provided valuable insights and feedback on user experience and functionality, resulting in a more cohesive and polished final product.
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<div class="work-hisotry-reference indent">
+						<a title="Click here to request references!" class="reference-link"
+							href="mailto: cj.garcia.swe@gmail.com?subject=Play Points Reference Request&body=Hello CJ, I'd like to request your references from your Google Play Points team.">
+							References Availabile Upon Request
+						</a>
+					</div>
 
-					<div class="work-history-title">Music Production Engineer</div>
-					<div class="work-history-company">MakeMusic</div>
-					<div class="work-history-summary">
+					<div class="work-history-title indent">Music Production Engineer</div>
+					<div class="work-history-company indent">MakeMusic</div>
+					<div class="work-history-summary indent">
 						<div>
 							3/2015 - 9/2021
 						</div>
@@ -211,14 +240,7 @@
 							Boulder, CO
 						</div>
 					</div>
-					<div class="work-history-summary">
-						MakeMusic, Inc. is a music technology company comprised of Finale, the world's best-selling
-						music
-						notation software; MakeMusic Cloud, formerly SmartMusic, an interactive practice application
-						featuring the world's largest online sheet music library; and Garritan, the leading provider of
-						quality virtual software instruments.
-					</div>
-					<ul class="work-history-experience">
+					<ul class="work-history-experience indent">
 						<li>
 							Built, uploaded, provided QA, and released content for the MakeMusic Cloud content library.
 						</li>
@@ -237,7 +259,7 @@
 							Preview, and ran refactored Bash scripts for interacting with the SVN server.
 						</li>
 					</ul>
-					<div class="work-hisotry-reference">
+					<div class="work-hisotry-reference indent">
 						<a title="Click here to request references from MakeMusic" class="reference-link"
 							href="mailto: cj.garcia.swe@gmail.com?subject=MakeMusic Reference Request&body=Hello CJ, I'd like to request your references from your MakeMusic experience.">
 							References Availabile Upon Request
@@ -259,12 +281,13 @@
 							CERTIFICATIONS
 						</div>
 					</div>
-					<a class="reference-link" href="https://www.linkedin.com/in/cj-garcia-music/details/certifications/"
+					<a class="reference-link indent" href="https://www.linkedin.com/in/cj-garcia-music/details/certifications/"
 						target="_blank">
 						<ul>
 							<li>LinkedIn Learning - 10 Course Flutter Development</li>
 							<li>Coursera - 3 Course Python Programming</li>
 							<li>Alphabet Accessibility Academy - Foundational Accessibility Knowledge</li>
+							<li>Department of Labor Software Engineering Apprenticeship Certificate - Multiverse</li>
 						</ul>
 					</a>
 				</div>
@@ -283,9 +306,9 @@
 							EDUCATION
 						</div>
 					</div>
-					<div class="work-history-title">Bachelor of Music Composition</div>
-					<div class="work-history-company">University of Denver</div>
-					<div class="work-history-summary">
+					<div class="work-history-title indent">Bachelor of Music Composition</div>
+					<div class="work-history-company indent">University of Denver</div>
+					<div class="work-history-summary indent">
 						<div>
 							9/2011 - 6/2015
 						</div>
@@ -306,8 +329,8 @@
 			<button class="collapsible" onclick="columnClick(event)">Angular</button>
 			<div class="collapsible-content">
 				<div class="project-section">
-					<p>
-						<a class="project-link" href="https://github.com/Google-SWE-DOL-CT" target="_blank">Google SWE
+					<p class="project-description">
+						<a class="project-title-link" href="https://github.com/Google-SWE-DOL-CT" target="_blank">Google SWE
 							Apprenticeship DOL Competency Tracker
 						</a>
 						- a website dedicated to tracking the progress and completion of all of the job function
@@ -330,7 +353,7 @@
 			<div class="collapsible-content">
 				<div class="project-section">
 					<p>
-						<a class="project-link" href="https://github.com/CJGarciaMusic/Seeds" target="_blank">
+						<a class="project-title-link" href="https://github.com/CJGarciaMusic/Seeds" target="_blank">
 							Seeds - WIP
 						</a>
 					<ul class="project-ul">
@@ -354,7 +377,7 @@
 				</div>
 				<div class="project-section">
 					<p>
-						<a class="project-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter"
+						<a class="project-title-link" href="https://github.com/CJGarciaMusic/LinkedInLearning-Flutter"
 							target="_blank">
 							Flutter Codelabs
 						</a>
@@ -443,8 +466,8 @@
 			<button class="collapsible" onclick="columnClick(event)">HTML/CSS/Javascript</button>
 			<div class="collapsible-content">
 				<div class="project-section">
-					<p>
-						<a class="project-link" href="https://github.com/Week-5/ecommerce">DQEC (E-commerce Web App)</a>
+					<p class="project-description">
+						<a class="project-title-link" href="https://github.com/Week-5/ecommerce">DQEC (E-commerce Web App)</a>
 						- end of bootcamp team project
 					<ul class="project-ul">
 						<li>
@@ -464,7 +487,7 @@
 				</div>
 				<div class="project-section">
 					<p>
-						<a class="project-link"
+						<a class="project-title-link"
 							href="https://github.com/CJGarciaMusic/CJGarciaMusic.github.io/blob/main/index.html"
 							target="_blank">This site!</a>
 					<ul class="project-ul">
@@ -478,8 +501,8 @@
 			<button class="collapsible" onclick="columnClick(event)">Java</button>
 			<div class="collapsible-content">
 				<div class="project-section">
-					<p>
-						<a class="project-link" href="https://github.com/CJGarciaMusic/VoiceMemos"
+					<p class="project-description">
+						<a class="project-title-link" href="https://github.com/CJGarciaMusic/VoiceMemos"
 							target="_blank">VoiceBox
 						</a>
 						- An app where you can record voice memos, save them, and share them out for other people to
@@ -499,8 +522,8 @@
 					</p>
 				</div>
 				<div class="project-section">
-					<p>
-						<a class="project-link" href="https://github.com/CJGarciaMusic/CodeWithMosh">Mosh DS&A
+					<p class="project-description">
+						<a class="project-title-link" href="https://github.com/CJGarciaMusic/CodeWithMosh">Mosh DS&A
 							Practice</a>
 					<ul class="project-ul">
 						<li>
@@ -519,8 +542,8 @@
 			<button class="collapsible" onclick="columnClick(event)">Lua</button>
 			<div class="collapsible-content">
 				<div class="project-section">
-					<p>
-						<a class="project-link" href="https://github.com/CJGarciaMusic/PowerUserWorkflow"
+					<p class="project-description">
+						<a class="project-title-link" href="https://github.com/CJGarciaMusic/PowerUserWorkflow"
 							target="_blank">JetStream Finale
 						</a>
 						- a suite of automation scripts to be used with a streamdeck in Finale.
@@ -587,6 +610,8 @@
 		var distance_45 = 0.45;
 		var distance_50 = 0.5;
 		var distance_50 = 0.5;
+		var list_two_line = 0.325;
+		var list_one_line = 0.175;
 
 		var left_margin = distance_40;
 		var indent_dot = 0.8;
@@ -612,15 +637,10 @@
 		textResume.text(name, left_margin, distance_current);
 
 		var subtitle = document.getElementsByClassName("subtitle")[0].innerHTML;
-		increaseCurrent(distance_25);
+		increaseCurrent(distance_20);
 		textResume.setFont("helvetica", "normal");
 		textResume.setFontSize(section_subheader_size);
 		textResume.text(subtitle, left_margin, distance_current);
-
-		var bio = document.getElementsByClassName("bio")[0].innerText;
-		increaseCurrent(distance_25);
-		textResume.setFontSize(section_content_size);
-		textResume.text(bio, left_margin, distance_current, { maxWidth: 5 })
 
 		var contactInfo = document.getElementsByClassName("contact-row");
 		var email = contactInfo[0].innerText.replace("email\n", "");
@@ -628,15 +648,8 @@
 		var location = contactInfo[2].innerText.replace("location_on\n", "");
 		var github = contactInfo[3].innerText;
 		textResume.setFontSize(section_content_size);
-
-		textResume.text(`Email: ${email}`, right_margin, distance_current, null, null, "right");
-		increaseCurrent(distance_25);
-		textResume.text(`Phone: ${phone}`, right_margin, distance_current, null, null, "right");
-		increaseCurrent(distance_25);
-		textResume.text(`Location: ${location}`, right_margin, distance_current, null, null, "right");
-		increaseCurrent(distance_25);
-		textResume.text(`GitHub: ${github}`, right_margin, distance_current, null, null, "right");
-		// textResume.text(`${email} • ${phone} • ${location}  • ${github}`, 4.25, 1, null, null, "center");
+		increaseCurrent(list_one_line);
+		textResume.text(`${email} • ${phone} • ${location}  • ${github}`, left_margin, distance_current);
 
 		textResume.line(left_margin, distance_current + 0.12, right_margin, distance_current + 0.12);
 
@@ -649,13 +662,13 @@
 		textResume.setFontSize(section_heading_size);
 		textResume.text("Skills", left_margin, distance_current);
 
-		increaseCurrent(distance_20);
+		increaseCurrent(list_one_line);
 		textResume.setFont("helvetica", "normal");
-		textResume.setFontSize(section_subheader_size);
+		textResume.setFontSize(section_content_size);
 		// TODO: technical skills breakout
 		textResume.text(technicalSkills, left_margin, distance_current);
 
-		increaseCurrent(distance_20);
+		increaseCurrent(list_one_line);
 		textResume.text(durableSkills, left_margin, distance_current);
 
 		var workHistoryTitle = document.getElementsByClassName("work-history-title");
@@ -664,7 +677,7 @@
 		var workHistorySection = document.getElementsByClassName("work-history-section");
 		var workHistoryExperience = document.getElementsByClassName("work-history-experience");
 
-		textResume.line(left_margin, distance_current + 0.12, right_margin, distance_current + 0.12);
+		textResume.line(left_margin, distance_current + 0.1, right_margin, distance_current + 0.12);
 
 		increaseCurrent(distance_35);
 		textResume.setFont("helvetica", "bold");
@@ -687,46 +700,76 @@
 		textResume.text(googleTime[0], left_margin, distance_current);
 		textResume.text(googleTime[1], right_margin, distance_current, null, null, "right");
 
-		increaseCurrent(distance_20);
-		textResume.text(workHistorySummary[1].innerText, left_margin, distance_current, { maxWidth: 7.2 });
-
-		increaseCurrent(distance_40);
+		increaseCurrent(list_one_line);
 		textResume.setFont("helvetica", "bold");
 		textResume.text(workHistorySection[0].innerText, left_margin, distance_current);
 
 		increaseCurrent(distance_20);
 		textResume.setFont("helvetica", "normal");
-		var playPointsExperience = workHistoryExperience[0].innerText.split("\n");
+		var devlIntexExperience = workHistoryExperience[0].innerText.split("\n");
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(playPointsExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		textResume.text(devlIntexExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		increaseCurrent(distance_35);
+		increaseCurrent(list_two_line);
+		textResume.text("•", indent_dot+(indent_dot / 2), distance_current);
+		textResume.text(devlIntexExperience[1].trim(), indent_margin+(indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin+(indent_margin / 2) - indent_dot) });
+		
+		increaseCurrent(list_two_line);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(playPointsExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		textResume.text(devlIntexExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
+		
+		increaseCurrent(list_two_line);
+		textResume.text("•", indent_dot, distance_current);
+		textResume.text(devlIntexExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		increaseCurrent(distance_45);
+		increaseCurrent(list_two_line);
+		textResume.text("•", indent_dot+(indent_dot / 2), distance_current);
+		textResume.text(devlIntexExperience[4].trim(), indent_margin+(indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin+(indent_margin / 2) - indent_dot) });
+
+		increaseCurrent(list_two_line);
+		textResume.text("•", indent_dot, distance_current);
+		textResume.text(devlIntexExperience[5].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
+
+		increaseCurrent(list_one_line);
+		textResume.text("•", indent_dot+(indent_dot / 2), distance_current);
+		textResume.text(devlIntexExperience[6].trim(), indent_margin+(indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin+(indent_margin / 2) - indent_dot) });
+
+		increaseCurrent(list_two_line);
+		textResume.text("•", indent_dot+(indent_dot / 2), distance_current);
+		textResume.text(devlIntexExperience[7].trim(), indent_margin+(indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin+(indent_margin / 2) - indent_dot) });
+
+		increaseCurrent(list_two_line);
 		textResume.setFont("helvetica", "bold");
 		textResume.text(workHistorySection[1].innerText, left_margin, distance_current);
 
 		increaseCurrent(distance_20);
 		textResume.setFont("helvetica", "normal");
-		var devIntelExperience = workHistoryExperience[1].innerText.split("\n");
+		var playPointsExperience = workHistoryExperience[1].innerText.split("\n");
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devIntelExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		textResume.text(playPointsExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		increaseCurrent(distance_20);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devIntelExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		increaseCurrent(list_two_line);
+		textResume.text("•", indent_dot+(indent_dot / 2), distance_current);
+		textResume.text(playPointsExperience[1].trim(), indent_margin+(indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin+(indent_margin / 2) - indent_dot) });
 
-		increaseCurrent(distance_20);
+		increaseCurrent(list_two_line);
+		textResume.text("•", indent_dot+(indent_dot / 2), distance_current);
+		textResume.text(playPointsExperience[2].trim(), indent_margin+(indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin+(indent_margin / 2) - indent_dot) });
+
+		increaseCurrent(list_two_line);
+		textResume.text("•", indent_dot+(indent_dot / 2), distance_current);
+		textResume.text(playPointsExperience[3].trim(), indent_margin+(indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin+(indent_margin / 2) - indent_dot) });
+		
+		increaseCurrent(list_two_line);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devIntelExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		textResume.text(playPointsExperience[4].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
+
+		increaseCurrent(list_two_line);
+		textResume.text("•", indent_dot+(indent_dot / 2), distance_current);
+		textResume.text(playPointsExperience[5].trim(), indent_margin+(indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin+(indent_margin / 2) - indent_dot) });
+		
 
 		increaseCurrent(distance_35);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devIntelExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
-
-		increaseCurrent(distance_30);
 		textResume.setFont("helvetica", "bold");
 		textResume.setFontSize(section_subheader_size);
 		textResume.text(workHistoryTitle[1].innerText, left_margin, distance_current);
@@ -742,10 +785,7 @@
 		textResume.text(makeMusicTime[0], left_margin, distance_current);
 		textResume.text(makeMusicTime[1], right_margin, distance_current, null, null, "right");
 
-		increaseCurrent(distance_20);
-		textResume.text(workHistorySummary[3].innerText, left_margin, distance_current, { maxWidth: 7.2 });
-
-		increaseCurrent(distance_50 + distance_05);
+		increaseCurrent(list_one_line);
 		textResume.setFont("helvetica", "bold");
 		textResume.text("Repertoire Development", left_margin, distance_current);
 
@@ -753,19 +793,19 @@
 		textResume.setFont("helvetica", "normal");
 		var makeMusicExperience = workHistoryExperience[2].innerText.split("\n");
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		textResume.text(makeMusicExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		increaseCurrent(distance_20);
+		increaseCurrent(list_one_line);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		textResume.text(makeMusicExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		increaseCurrent(distance_35);
+		increaseCurrent(list_one_line);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		textResume.text(makeMusicExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-		increaseCurrent(distance_35);
+		increaseCurrent(list_two_line);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		textResume.text(makeMusicExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
 		textResume.line(left_margin, distance_current + distance_40, right_margin, distance_current + distance_40);
 
@@ -783,13 +823,17 @@
 		textResume.text("•", indent_dot, distance_current);
 		textResume.text(certs[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-		increaseCurrent(distance_20);
+		increaseCurrent(list_one_line);
 		textResume.text("•", indent_dot, distance_current);
 		textResume.text(certs[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-		increaseCurrent(distance_20);
+		// increaseCurrent(list_one_line);
+		// textResume.text("•", indent_dot, distance_current);
+		// textResume.text(certs[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+
+		increaseCurrent(list_one_line);
 		textResume.text("•", indent_dot, distance_current);
-		textResume.text(certs[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+		textResume.text(certs[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 		textResume.line(left_margin, distance_current + distance_10, right_margin, distance_current + distance_10);
 
@@ -798,16 +842,16 @@
 		textResume.setFontSize(section_heading_size);
 		textResume.text("Education", left_margin, distance_current);
 
-		increaseCurrent(distance_20);
+		increaseCurrent(list_one_line);
 		textResume.setFontSize(section_subheader_size);
 		textResume.text(workHistoryTitle[2].innerText, left_margin, distance_current);
 
-		increaseCurrent(distance_20);
+		increaseCurrent(list_one_line);
 		textResume.setFont("helvetica", "normal");
 		textResume.setFontSize(section_subheader_size);
 		textResume.text(workHistoryCompany[2].innerText, left_margin, distance_current);
 
-		increaseCurrent(distance_20);
+		increaseCurrent(list_one_line);
 		textResume.setFont("helvetica", "italic");
 		textResume.setFontSize(section_content_size);
 		var educationDetails = workHistorySummary[2].innerText.split("\n");
@@ -833,10 +877,6 @@
 			window.jsPDF = window.jspdf.jsPDF;
 			var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
 			pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
-			for (var i = 1; i <= totalPDFPages; i++) {
-				pdf.addPage(PDF_Width, PDF_Height);
-				pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 4), canvas_image_width, canvas_image_height);
-			}
 
 			pdf.save(`CJ_Garcia_Resume_Image_${today}.pdf`);
 		});

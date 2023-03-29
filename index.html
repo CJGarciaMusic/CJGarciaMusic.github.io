@@ -7,10 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="theme.css" />
-	<!-- <link rel="stylesheet" type="text/css" href="https://cjgarciamusic.github.io/theme.css"> -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="./script.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -19,8 +19,8 @@
 
 <body>
 	<div class="tab">
-		<button id="ResumeTab" class="tablinks active" onclick="openSection(event, 'Resume')"
-			tabindex="1">Resume</button>
+		<button id="ResumeTab" class="tablinks active" onclick="openSection(event, 'Resume')" tabindex="1"
+			autofocus>Resume</button>
 		<button id="ProjectsTab" class="tablinks" onclick="openSection(event, 'Projects')"
 			tabindex="2">Projects</button>
 	</div>
@@ -91,31 +91,32 @@
 					</div>
 					<div class="skill-list">
 						<div class="skill-type indent">Technical:</div>
-						<div id="Angular" class="single-skill" onclick="navTo(event)">Angular</div>
-						<div id="Angular" class="single-skill" onclick="navTo(event)">TypeScript</div>
-						<div id="Flutter" class="single-skill" onclick="navTo(event)">Flutter</div>
-						<div id="Flutter" class="single-skill" onclick="navTo(event)">Dart</div>
-						<div id="HTML/CSS/Javascript" class="single-skill" onclick="navTo(event)">HTML/CSS/Javascript
+						<div id="Angular" class="single-skill-link" onclick="navTo(event)">Angular/TypeScript</div>
+						<div id="Flutter" class="single-skill-link" onclick="navTo(event)">Flutter/Dart</div>
+						<div id="HTML/CSS/Javascript" class="single-skill-link" onclick="navTo(event)">
+							HTML/CSS/Javascript
 						</div>
-						<div id="Java" class="single-skill" onclick="navTo(event)">Java</div>
-						<div id="Lua" class="single-skill" onclick="navTo(event)">Lua</div>
+						<div id="Java" class="single-skill-link" onclick="navTo(event)">Java</div>
+						<div id="Lua" class="single-skill-link" onclick="navTo(event)">Lua</div>
+						<div id="HTML/CSS/Javascript" class="single-skill">NodeJS</div>
+						<div id="HTML/CSS/Javascript" class="single-skill">SQLite</div>
 						<div class="single-skill">React</div>
 						<div class="single-skill">RxJs</div>
 					</div>
 					<div class="skill-list">
 						<div class="skill-type indent">Durable:</div>
 						<div class="single-skill">Public Speaking</div>
-						<a class="skill-link" href="https://youtu.be/KLqLT7bFqRA" target="_blank" tabindex="7">
-							<div class="single-skill">
-								Presenting
-							</div>
-						</a>
 						<div class="single-skill">Adaptability</div>
 						<div class="single-skill">Creativity</div>
 						<div class="single-skill">Self-motivation</div>
+						<a class="skill-link" href="https://youtu.be/KLqLT7bFqRA" target="_blank" tabindex="7">
+							<div class="single-skill-link">
+								Presenting
+							</div>
+						</a>
 						<a class="skill-link" href="https://www.linkedin.com/in/cj-garcia-music/details/certifications/"
 							target="_blank" tabindex="8">
-							<div class="single-skill">
+							<div class="single-skill-link">
 								Lifetime Learner
 							</div>
 						</a>
@@ -153,44 +154,25 @@
 						</div>
 						<ul class="work-history-experience indent">
 							<li>
-								Delivered key front end features for the alpha launch of an internal application for
-								senior and executive level employees. Contributing to 50+ merge requests using
-								Angular/TypeScript, this accelerated the timeline of those features by two quarters.
+								Delivered key front end features for the alpha launch of our application whose
+								primary customers are senior and executive level employees. By contributing 50+ merge
+								requests using Angular/TypeScript, this accelerated the timeline of those features by
+								two quarters.
 							</li>
 							<li>
-								Collaborated closely with the UX team to ensure that components aligned
+								Collaborated with the UX team to ensure that components aligned
 								with the Figma mockups and enhanced the user experience across the application,
 								changing 3500+ lines of code.
 							</li>
 							<li>
-								Averaged 100% behavioral testing coverage using the Jasmine framework.
-							</li>
-							<li>
-
-								 use of Material UI, robust , and a Java-based
-										backend, to optimize the performance and
-										functionality of the application.
-									</li>
-								</ul>
-							</li>
-							<li>
-								Actively participated in all team meetings, including daily standups, bi-weekly demos,
-								and
-								sprint retrospectives.
-								<ul>
-									<li>Provided valuable insights and feedback on completed work, and collaborated with
-										team members to identify and resolve potential roadblocks to project success.
-									</li>
-									<li>Consistently demonstrated strong communication skills, fostering a positive and
-										productive team environment.
-									</li>
-								</ul>
+								Wrote exceptional behavioral tests using the Jasmine framework with an average of 100%
+								coverage.
 							</li>
 						</ul>
 						<div class="work-hisotry-reference indent">
-							<a title="Click here to request references!" class="reference-link"
+							<a title="Click here to request references from CJ's DevIntel team!" class="reference-link"
 								href="mailto: cj.garcia.swe@gmail.com?subject=DevIntel Reference Request&body=Hello CJ, I'd like to request your references from your Google DevIntel team."
-								tabindex="11">
+								tabindex="11" target="_blank">
 								References Availabile Upon Request
 							</a>
 						</div>
@@ -203,39 +185,23 @@
 						<ul class="work-history-experience indent">
 							<li>
 								Implemented a full-stack feature that dynamically renders footer links on five
-								user-facing pages, resulting in a more streamlined and user-friendly experience for
-								billions of users.
-								<ul>
-									<li>
-										Leveraged expertise in Java and internal templating and rendering languages to
-										deliver high-quality code that improved the overall performance and
-										functionality of the feature.
-									</li>
-									<li>
-										Contributed 18 production commits, totaling 558 lines of code added, 7 lines of
-										code deleted, and 54 lines of code changed, to the development of the feature.
-									</li>
-									<li>
-										Showed remarkable attention to detail and adherence to best practices throughout
-										the development process, resulting in a robust and reliable feature.
-									</li>
-								</ul>
+								user-facing pages, resulting in a more streamlined experience for billions of users.
 							</li>
 							<li>
-								Communicated frequently with the UX team to ensure that the dynamic rendering of footer
-								links aligned with the overall design and branding of the application.
-								<ul>
-									<li>
-										Provided valuable insights and feedback on user experience and functionality,
-										resulting in a more cohesive and polished final product.
-									</li>
-								</ul>
+								Owned the entirety of the feature from writing a thorough deisgn document explicitly
+								outlining corner cases and alternative designs all the way through implementation and
+								release.
+							</li>
+
+							<li>
+								Contributed to 20+ merge requests using Java and internal templating languages totaling
+								in 1000+ lines of code changed.
 							</li>
 						</ul>
 						<div class="work-hisotry-reference indent">
-							<a title="Click here to request references!" class="reference-link"
+							<a title="Click here to request references from CJ's LP&E team!" class="reference-link"
 								href="mailto: cj.garcia.swe@gmail.com?subject=Play Points Reference Request&body=Hello CJ, I'd like to request your references from your Google Play Points team."
-								tabindex="13">
+								tabindex="13" target="_blank">
 								References Availabile Upon Request
 							</a>
 						</div>
@@ -254,18 +220,14 @@
 						<ul class="work-history-experience indent">
 							<li>
 								Created a suite of OS agnostic automation scripts that removed the reliability on
-								external
-								software, automated tasks for a number of applications including Finale, Digital
-								Performer,
-								Preview, and ran refactored Bash scripts for interacting with the SVN server.
+								external software using Python, Bash, AppleScript, and AutoIt.
 							</li>
 							<li>
-								Mentored coworkers on best practices and continue to lead those efforts by creating
-								training
-								materials and training sessions.
+								Mentored coworkers on best practices and continued to lead those efforts by creating
+								training materials and sessions.
 							</li>
 							<li>
-								Updated then created a new department wiki for documentation of processes and a central
+								Created a new department wiki for documentation of processes and a central
 								go-to
 								reference.
 							</li>
@@ -275,9 +237,9 @@
 							</li>
 						</ul>
 						<div class="work-hisotry-reference indent">
-							<a title="Click here to request references from MakeMusic" class="reference-link"
+							<a title="Click here to request references from CJ's MakeMusic team" class="reference-link"
 								href="mailto: cj.garcia.swe@gmail.com?subject=MakeMusic Reference Request&body=Hello CJ, I'd like to request your references from your MakeMusic experience."
-								tabindex="15">
+								tabindex="15" target="_blank">
 								References Availabile Upon Request
 							</a>
 						</div>
@@ -305,7 +267,8 @@
 							<li>LinkedIn Learning - 10 Course Flutter Development</li>
 							<li>Coursera - 3 Course Python Programming</li>
 							<li>Alphabet Accessibility Academy - Foundational Accessibility Knowledge</li>
-							<li>Department of Labor Software Engineering Apprenticeship Certificate - Multiverse</li>
+							<li>Software Engineering Apprenticeship Certificate - US Department of Labor via Multiverse
+							</li>
 						</ul>
 					</a>
 				</div>
@@ -344,7 +307,7 @@
 	</div>
 	<div id="Projects" class="tab-content">
 		<div class="project-content">
-			<button class="collapsible" onclick="columnClick(event)">Angular</button>
+			<button class="collapsible" onclick="columnClick(event)">Angular/TypeScript</button>
 			<div class="collapsible-content">
 				<div class="project-section">
 					<p class="project-description">
@@ -368,7 +331,7 @@
 					</p>
 				</div>
 			</div>
-			<button class="collapsible" onclick="columnClick(event)">Flutter</button>
+			<button class="collapsible" onclick="columnClick(event)">Flutter/Dart</button>
 			<div class="collapsible-content">
 				<div class="project-section">
 					<p>
@@ -585,350 +548,3 @@
 		</div>
 	</div>
 </body>
-<script>
-	var today = new Date();
-	var dd = String(today.getDate()).padStart(2, '0');
-	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-	var yyyy = today.getFullYear();
-
-	today = mm + '_' + dd + '_' + yyyy;
-
-	function openSection(evt, sectionName) {
-		var i, tabContent, tablinks;
-		tabContent = document.getElementsByClassName("tab-content");
-		for (i = 0; i < tabContent.length; i++) {
-			tabContent[i].style.display = "none";
-		}
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-		document.getElementById(sectionName).style.display = "block";
-		if (evt.currentTarget != undefined) {
-			evt.currentTarget.className += " active";
-		}
-	}
-
-	function createTextPDF() {
-		window.jsPDF = window.jspdf.jsPDF
-		var textResume = new jsPDF({
-			orientation: 'p',
-			unit: 'in',
-			format: [8.5, 11],
-			putOnlyUsedFonts: true,
-		});
-
-
-		var distance_05 = 0.05;
-		var distance_10 = 0.1;
-		var distance_15 = 0.15;
-		var distance_20 = 0.2;
-		var distance_25 = 0.25;
-		var distance_30 = 0.3;
-		var distance_35 = 0.35;
-		var distance_40 = 0.40;
-		var distance_45 = 0.45;
-		var distance_50 = 0.5;
-		var distance_50 = 0.5;
-		var list_two_line = 0.325;
-		var list_one_line = 0.175;
-
-		var left_margin = distance_40;
-		var indent_dot = 0.8;
-		var indent_margin = 0.9
-		var right_margin = 8.1;
-
-
-		var distance_current = distance_40;
-
-		function increaseCurrent(given_distance) {
-			distance_current += given_distance;
-		}
-
-		textResume.setLineWidth(0.01);
-
-		var section_heading_size = 14;
-		var section_subheader_size = 12;
-		var section_content_size = 10;
-
-		var name = document.getElementsByClassName("name")[0].innerHTML;
-		textResume.setFont("helvetica", "bold");
-		textResume.setFontSize(16);
-		textResume.text(name, left_margin, distance_current);
-
-		var subtitle = document.getElementsByClassName("subtitle")[0].innerHTML;
-		increaseCurrent(distance_20);
-		textResume.setFont("helvetica", "normal");
-		textResume.setFontSize(section_subheader_size);
-		textResume.text(subtitle, left_margin, distance_current);
-
-		var contactInfo = document.getElementsByClassName("contact-row");
-		var email = contactInfo[0].innerText.replace("email\n", "");
-		var phone = contactInfo[1].innerText.replace("phone_android\n", "");
-		var location = contactInfo[2].innerText.replace("location_on\n", "");
-		var github = contactInfo[3].innerText;
-		textResume.setFontSize(section_content_size);
-		increaseCurrent(list_one_line);
-		textResume.text(`${email} • ${phone} • ${location}  • ${github}`, left_margin, distance_current);
-
-		textResume.line(left_margin, distance_current + 0.12, right_margin, distance_current + 0.12);
-
-		var skillsSection = document.getElementsByClassName("skills-content")[0].children;
-		var technicalSkills = skillsSection[1].innerText.replace("\n", " ").replaceAll("\n", ", ");
-		var durableSkills = skillsSection[2].innerText.replace("\n", " ").replaceAll("\n", ", ");
-
-		increaseCurrent(distance_35);
-		textResume.setFont("helvetica", "bold");
-		textResume.setFontSize(section_heading_size);
-		textResume.text("Skills", left_margin, distance_current);
-
-		increaseCurrent(list_one_line);
-		textResume.setFont("helvetica", "normal");
-		textResume.setFontSize(section_content_size);
-		// TODO: technical skills breakout
-		textResume.text(technicalSkills, left_margin, distance_current);
-
-		increaseCurrent(list_one_line);
-		textResume.text(durableSkills, left_margin, distance_current);
-
-		var workHistoryTitle = document.getElementsByClassName("work-history-title");
-		var workHistoryCompany = document.getElementsByClassName("work-history-company");
-		var workHistorySummary = document.getElementsByClassName("work-history-summary");
-		var workHistorySection = document.getElementsByClassName("work-history-section");
-		var workHistoryExperience = document.getElementsByClassName("work-history-experience");
-
-		textResume.line(left_margin, distance_current + 0.1, right_margin, distance_current + 0.12);
-
-		increaseCurrent(distance_35);
-		textResume.setFont("helvetica", "bold");
-		textResume.setFontSize(section_heading_size);
-		textResume.text("Work Experience", left_margin, distance_current);
-
-		increaseCurrent(distance_20);
-		textResume.setFontSize(section_subheader_size);
-		textResume.text(workHistoryTitle[0].innerText, left_margin, distance_current);
-
-		increaseCurrent(distance_20);
-		textResume.setFont("helvetica", "normal");
-		textResume.setFontSize(section_subheader_size);
-		textResume.text(workHistoryCompany[0].innerText, left_margin, distance_current);
-
-		increaseCurrent(distance_20);
-		textResume.setFont("helvetica", "italic");
-		textResume.setFontSize(section_content_size);
-		var googleTime = workHistorySummary[0].innerText.split("\n");
-		textResume.text(googleTime[0], left_margin, distance_current);
-		textResume.text(googleTime[1], right_margin, distance_current, null, null, "right");
-
-		increaseCurrent(list_one_line);
-		textResume.setFont("helvetica", "bold");
-		textResume.text(workHistorySection[0].innerText, left_margin, distance_current);
-
-		increaseCurrent(distance_20);
-		textResume.setFont("helvetica", "normal");
-		var devlIntexExperience = workHistoryExperience[0].innerText.split("\n");
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devlIntexExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-		textResume.text(devlIntexExperience[1].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devlIntexExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devlIntexExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-		textResume.text(devlIntexExperience[4].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(devlIntexExperience[5].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		increaseCurrent(list_one_line);
-		textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-		textResume.text(devlIntexExperience[6].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-		textResume.text(devlIntexExperience[7].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.setFont("helvetica", "bold");
-		textResume.text(workHistorySection[1].innerText, left_margin, distance_current);
-
-		increaseCurrent(distance_20);
-		textResume.setFont("helvetica", "normal");
-		var playPointsExperience = workHistoryExperience[1].innerText.split("\n");
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(playPointsExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-		textResume.text(playPointsExperience[1].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-		textResume.text(playPointsExperience[2].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-		textResume.text(playPointsExperience[3].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(playPointsExperience[4].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-		textResume.text(playPointsExperience[5].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-
-		increaseCurrent(distance_35);
-		textResume.setFont("helvetica", "bold");
-		textResume.setFontSize(section_subheader_size);
-		textResume.text(workHistoryTitle[1].innerText, left_margin, distance_current);
-
-		increaseCurrent(distance_20);
-		textResume.setFont("helvetica", "normal");
-		textResume.text(workHistoryCompany[1].innerText, left_margin, distance_current);
-
-		increaseCurrent(distance_20);
-		textResume.setFont("helvetica", "italic");
-		textResume.setFontSize(section_content_size);
-		var makeMusicTime = workHistorySummary[2].innerText.split("\n");
-		textResume.text(makeMusicTime[0], left_margin, distance_current);
-		textResume.text(makeMusicTime[1], right_margin, distance_current, null, null, "right");
-
-		increaseCurrent(list_one_line);
-		textResume.setFont("helvetica", "bold");
-		textResume.text("Repertoire Development", left_margin, distance_current);
-
-		increaseCurrent(distance_20);
-		textResume.setFont("helvetica", "normal");
-		var makeMusicExperience = workHistoryExperience[2].innerText.split("\n");
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		increaseCurrent(distance_50);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		increaseCurrent(list_two_line);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		increaseCurrent(list_one_line);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(makeMusicExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-		textResume.line(left_margin, distance_current + 0.06, right_margin, distance_current + 0.06);
-
-		increaseCurrent(distance_25);
-		textResume.setFont("helvetica", "bold");
-		textResume.setFontSize(section_heading_size);
-		textResume.text("Certifications", left_margin, distance_current);
-
-		var certs = document.getElementsByClassName("reference-link");
-		var certs = certs[certs.length - 1].innerText.split("\n");
-
-		increaseCurrent(distance_20);
-		textResume.setFont("helvetica", "normal");
-		textResume.setFontSize(section_content_size);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(certs[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
-
-		increaseCurrent(list_one_line);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(certs[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
-
-		// increaseCurrent(list_one_line);
-		// textResume.text("•", indent_dot, distance_current);
-		// textResume.text(certs[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
-
-		increaseCurrent(list_one_line);
-		textResume.text("•", indent_dot, distance_current);
-		textResume.text(certs[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
-
-		textResume.line(left_margin, distance_current + distance_10, right_margin, distance_current + distance_10);
-
-		increaseCurrent(distance_30);
-		textResume.setFont("helvetica", "bold");
-		textResume.setFontSize(section_heading_size);
-		textResume.text("Education", left_margin, distance_current);
-
-		increaseCurrent(list_one_line);
-		textResume.setFontSize(section_subheader_size);
-		textResume.text(workHistoryTitle[2].innerText, left_margin, distance_current);
-
-		increaseCurrent(list_one_line);
-		textResume.setFont("helvetica", "normal");
-		textResume.setFontSize(section_subheader_size);
-		textResume.text(workHistoryCompany[2].innerText, left_margin, distance_current);
-
-		increaseCurrent(list_one_line);
-		textResume.setFont("helvetica", "italic");
-		textResume.setFontSize(section_content_size);
-		var educationDetails = workHistorySummary[2].innerText.split("\n");
-		textResume.text(educationDetails[0], left_margin, distance_current);
-		textResume.text(educationDetails[1], right_margin, distance_current, null, null, "right");
-
-		textResume.save(`CJ_Garcia_Resume_Text_${today}.pdf`);
-	}
-
-	function createPDFfromHTML() {
-		var HTML_Width = $(".resume-content").width();
-		var HTML_Height = $(".resume-content").height();
-		var top_left_margin = 15;
-		var PDF_Width = (HTML_Width + (top_left_margin * 2) / 2);
-		var PDF_Height = ((HTML_Height) + (top_left_margin * 2) / 2);
-		var canvas_image_width = HTML_Width;
-		var canvas_image_height = HTML_Height;
-
-		var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
-
-		html2canvas($(".resume-content")[0]).then(function (canvas) {
-			var imgData = canvas.toDataURL("image/jpeg", 1.0);
-			window.jsPDF = window.jspdf.jsPDF;
-			var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
-			pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
-
-			pdf.save(`CJ_Garcia_Resume_Image_${today}.pdf`);
-		});
-	}
-
-	function columnClick(event) {
-		var element = event.srcElement;
-		element.classList.toggle("collapsible-active");
-		var content = element.nextElementSibling;
-		if (content.style.maxHeight) {
-			content.style.maxHeight = null;
-		} else {
-			content.style.maxHeight = content.scrollHeight + "px";
-		}
-	}
-
-	function navTo(evt) {
-		var projectTab = document.getElementById("ProjectsTab");
-		openSection(projectTab, "Projects");
-		projectTab.className += " active";
-		var coll = document.getElementsByClassName("collapsible");
-		buttonText = evt.srcElement.id;
-		for (var i = 0; i < coll.length; i++) {
-			coll[i].classList.remove("collapsible-active");
-			var content = coll[i].nextElementSibling;
-			content.style.maxHeight = null;
-		}
-		for (var i = 0; i < coll.length; i++) {
-			if (coll[i].innerText == buttonText) {
-				coll[i].click();
-			}
-		}
-	}
-
-</script>

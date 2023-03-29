@@ -14,6 +14,7 @@ body {
     --standard-top-margin: 8px;
     --large-font-size: 24px;
     --medium-font-size: 16px;
+    --bulletpoint-font-size: 14px;
     --small-font-size: 12px;
 }
 
@@ -33,12 +34,11 @@ body {
 /* Style the buttons inside the tab */
 button {
     font-family: inherit;
-    font-size: 24px;
+    font-size: var(--large-font-size);
     background-color: var(--light-grey);
     border-radius: var(--standard-radius);
     color: var(--dark-color);
     border: none;
-    outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: var(--standard-transition-time);
@@ -56,11 +56,6 @@ button.active {
     color: #fff;
 }
 
-:focus {
-    border: 1px solid var(--light-grey);
-    border-radius: var(--standard-radius);
-}
-
 /* Style the tab content */
 .tab-content {
     display: none;
@@ -70,7 +65,7 @@ button.active {
 
 ul {
     list-style: none;
-    font-size: var(--small-font-size);
+    font-size: var(--bulletpoint-font-size);
     margin: 0px;
 }
 
@@ -81,6 +76,7 @@ ul li::before {
     display: inline-block;
     width: 0.75em;
     margin-left: -1em;
+    margin-top: 5px;
 }
 
 .dark-link {
@@ -251,10 +247,12 @@ ul li::before {
     font-size: 18px;
 }
 
-.fa-sm{
+.fa-sm {
     font-size: 18px !important;
-    transform: translateY(1px);
-};
+    /* transform: translateY(0px); */
+}
+
+;
 
 .icon-light {
     color: var(--light-color);
@@ -329,8 +327,15 @@ ul li::before {
     transition: var(--standard-transition-time) ease-in-out;
 }
 
-.single-skill:hover {
-    transform: scale(1.1);
+.single-skill-link {
+    background-color: var(--light-color);
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: var(--standard-transition-time) ease-in-out;
+}
+
+.single-skill-link:hover {
+    transform: scale(1.05);
     cursor: pointer;
     opacity: 0.75;
 }
@@ -370,8 +375,7 @@ ul li::before {
 }
 
 .work-history-experience {
-    margin-top: 4px;
-    font-size: var(--small-font-size);
+    font-size: var(--bulletpoint-font-size);
 }
 
 .work-history-section {
@@ -385,9 +389,9 @@ ul li::before {
 }
 
 .work-hisotry-reference {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    font-size: var(--small-font-size);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: var(--bulletpoint-font-size);
     font-style: italic;
 }
 

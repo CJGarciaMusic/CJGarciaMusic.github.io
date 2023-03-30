@@ -56,11 +56,6 @@ button.active {
     color: #fff;
 }
 
-:focus {
-    border: 1px solid var(--light-grey);
-    border-radius: var(--standard-radius);
-}
-
 /* Style the tab content */
 .tab-content {
     display: none;
@@ -254,7 +249,10 @@ ul li::before {
 
 .fa-sm {
     font-size: 18px !important;
-};
+    /* transform: translateY(0px); */
+}
+
+;
 
 .icon-light {
     color: var(--light-color);

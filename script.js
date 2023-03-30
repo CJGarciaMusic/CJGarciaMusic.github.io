@@ -42,7 +42,7 @@ function createTextPDF() {
     var distance_45 = 0.45;
     var distance_50 = 0.5;
     var distance_50 = 0.5;
-    var list_two_line = 0.325;
+    var distance_35 = 0.325;
     var list_one_line = 0.175;
 
     var left_margin = distance_40;
@@ -142,35 +142,24 @@ function createTextPDF() {
     textResume.text("•", indent_dot, distance_current);
     textResume.text(devlIntexExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(list_two_line);
-    textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-    textResume.text(devlIntexExperience[1].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
+    increaseCurrent(distance_35);
+    textResume.text("•", indent_dot, distance_current);
+    textResume.text(devlIntexExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    increaseCurrent(list_two_line);
+    increaseCurrent(distance_20);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(devlIntexExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(list_two_line);
+    increaseCurrent(distance_35);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(devlIntexExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(list_two_line);
-    textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-    textResume.text(devlIntexExperience[4].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-    increaseCurrent(list_two_line);
+    increaseCurrent(distance_20);
     textResume.text("•", indent_dot, distance_current);
-    textResume.text(devlIntexExperience[5].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
+    textResume.text(devlIntexExperience[4].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    increaseCurrent(list_one_line);
-    textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-    textResume.text(devlIntexExperience[6].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
 
-    increaseCurrent(list_two_line);
-    textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-    textResume.text(devlIntexExperience[7].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-    increaseCurrent(list_two_line);
+    increaseCurrent(distance_35);
     textResume.setFont("helvetica", "bold");
     textResume.text(workHistorySection[1].innerText, left_margin, distance_current);
 
@@ -180,25 +169,25 @@ function createTextPDF() {
     textResume.text("•", indent_dot, distance_current);
     textResume.text(playPointsExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(list_two_line);
-    textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-    textResume.text(playPointsExperience[1].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-    increaseCurrent(list_two_line);
-    textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-    textResume.text(playPointsExperience[2].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-    increaseCurrent(list_two_line);
-    textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-    textResume.text(playPointsExperience[3].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
-
-    increaseCurrent(list_two_line);
+    increaseCurrent(distance_35);
     textResume.text("•", indent_dot, distance_current);
-    textResume.text(playPointsExperience[4].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
+    textResume.text(playPointsExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    increaseCurrent(list_two_line);
-    textResume.text("•", indent_dot + (indent_dot / 2), distance_current);
-    textResume.text(playPointsExperience[5].trim(), indent_margin + (indent_margin / 2), distance_current, { maxWidth: 7.2 - (indent_margin + (indent_margin / 2) - indent_dot) });
+    increaseCurrent(distance_35);
+    textResume.text("•", indent_dot, distance_current);
+    textResume.text(playPointsExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+
+    // increaseCurrent(distance_35);
+    // textResume.text("•", indent_dot, distance_current);
+    // textResume.text(playPointsExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin});
+
+    // increaseCurrent(distance_35);
+    // textResume.text("•", indent_dot, distance_current);
+    // textResume.text(playPointsExperience[4].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
+
+    // increaseCurrent(distance_35);
+    // textResume.text("•", indent_dot, distance_current);
+    // textResume.text(playPointsExperience[5].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin});
 
 
     increaseCurrent(distance_35);
@@ -231,7 +220,7 @@ function createTextPDF() {
     textResume.text("•", indent_dot, distance_current);
     textResume.text(makeMusicExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(list_two_line);
+    increaseCurrent(distance_35);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(makeMusicExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 

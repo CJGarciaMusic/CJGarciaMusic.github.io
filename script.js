@@ -191,7 +191,7 @@ function createTextPDF() {
     increaseCurrent(distance_20);
     textResume.setFont("helvetica", "italic");
     textResume.setFontSize(section_content_size);
-    var makeMusicTime = workHistorySummary[2].innerText.split("\n");
+    var makeMusicTime = workHistorySummary[1].innerText.split("\n");
     textResume.text(makeMusicTime[0], left_margin, distance_current);
     textResume.text(makeMusicTime[1], right_margin, distance_current, null, null, "right");
 

@@ -380,6 +380,7 @@ ul li::before {
 
 .work-history-section {
     font-size: var(--medium-font-size);
+    margin-top: 5px;
 }
 
 

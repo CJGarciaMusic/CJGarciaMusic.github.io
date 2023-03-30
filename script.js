@@ -43,7 +43,6 @@ function createTextPDF() {
     var distance_50 = 0.5;
     var distance_50 = 0.5;
     var distance_35 = 0.325;
-    var list_one_line = 0.175;
 
     var left_margin = distance_40;
     var indent_dot = 0.8;
@@ -69,7 +68,7 @@ function createTextPDF() {
     textResume.text(name, left_margin, distance_current);
 
     var subtitle = document.getElementsByClassName("subtitle")[0].innerHTML;
-    increaseCurrent(distance_20);
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "normal");
     textResume.setFontSize(section_subheader_size);
     textResume.text(subtitle, left_margin, distance_current);
@@ -80,27 +79,28 @@ function createTextPDF() {
     var location = contactInfo[2].innerText.replace("location_on\n", "");
     var github = contactInfo[3].innerText;
     textResume.setFontSize(section_content_size);
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_20);
     textResume.text(`${email} • ${phone} • ${location}  • ${github}`, left_margin, distance_current);
 
-    textResume.line(left_margin, distance_current + 0.12, right_margin, distance_current + 0.12);
+    increaseCurrent(distance_15);
+    textResume.line(left_margin, distance_current, right_margin, distance_current);
 
     var skillsSection = document.getElementsByClassName("skills-content")[0].children;
     var technicalSkills = skillsSection[1].innerText.replace("\n", " ").replaceAll("\n", ", ");
     var durableSkills = skillsSection[2].innerText.replace("\n", " ").replaceAll("\n", ", ");
 
-    increaseCurrent(distance_35);
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "bold");
     textResume.setFontSize(section_heading_size);
     textResume.text("Skills", left_margin, distance_current);
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_20);
     textResume.setFont("helvetica", "normal");
     textResume.setFontSize(section_content_size);
     // TODO: technical skills breakout
     textResume.text(technicalSkills, left_margin, distance_current);
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_20);
     textResume.text(durableSkills, left_margin, distance_current);
 
     var workHistoryTitle = document.getElementsByClassName("work-history-title");
@@ -109,14 +109,15 @@ function createTextPDF() {
     var workHistorySection = document.getElementsByClassName("work-history-section");
     var workHistoryExperience = document.getElementsByClassName("work-history-experience");
 
-    textResume.line(left_margin, distance_current + 0.1, right_margin, distance_current + 0.12);
+    increaseCurrent(distance_15)
+    textResume.line(left_margin, distance_current, right_margin, distance_current);
 
-    increaseCurrent(distance_35);
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "bold");
     textResume.setFontSize(section_heading_size);
     textResume.text("Work Experience", left_margin, distance_current);
 
-    increaseCurrent(distance_20);
+    increaseCurrent(distance_25);
     textResume.setFontSize(section_subheader_size);
     textResume.text(workHistoryTitle[0].innerText, left_margin, distance_current);
 
@@ -132,29 +133,29 @@ function createTextPDF() {
     textResume.text(googleTime[0], left_margin, distance_current);
     textResume.text(googleTime[1], right_margin, distance_current, null, null, "right");
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "bold");
     textResume.text(workHistorySection[0].innerText, left_margin, distance_current);
 
-    increaseCurrent(distance_20);
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "normal");
     var devlIntexExperience = workHistoryExperience[0].innerText.split("\n");
     textResume.text("•", indent_dot, distance_current);
     textResume.text(devlIntexExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(distance_35);
+    increaseCurrent(distance_40);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(devlIntexExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    increaseCurrent(distance_20);
+    increaseCurrent(distance_25);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(devlIntexExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(distance_35);
+    increaseCurrent(distance_40);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(devlIntexExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(distance_20);
+    increaseCurrent(distance_25);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(devlIntexExperience[4].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
@@ -163,34 +164,22 @@ function createTextPDF() {
     textResume.setFont("helvetica", "bold");
     textResume.text(workHistorySection[1].innerText, left_margin, distance_current);
 
-    increaseCurrent(distance_20);
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "normal");
     var playPointsExperience = workHistoryExperience[1].innerText.split("\n");
     textResume.text("•", indent_dot, distance_current);
     textResume.text(playPointsExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(distance_35);
+    increaseCurrent(distance_40);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(playPointsExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    increaseCurrent(distance_35);
+    increaseCurrent(distance_40);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(playPointsExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    // increaseCurrent(distance_35);
-    // textResume.text("•", indent_dot, distance_current);
-    // textResume.text(playPointsExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin});
 
-    // increaseCurrent(distance_35);
-    // textResume.text("•", indent_dot, distance_current);
-    // textResume.text(playPointsExperience[4].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
-
-    // increaseCurrent(distance_35);
-    // textResume.text("•", indent_dot, distance_current);
-    // textResume.text(playPointsExperience[5].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin});
-
-
-    increaseCurrent(distance_35);
+    increaseCurrent(distance_50);
     textResume.setFont("helvetica", "bold");
     textResume.setFontSize(section_subheader_size);
     textResume.text(workHistoryTitle[1].innerText, left_margin, distance_current);
@@ -206,29 +195,31 @@ function createTextPDF() {
     textResume.text(makeMusicTime[0], left_margin, distance_current);
     textResume.text(makeMusicTime[1], right_margin, distance_current, null, null, "right");
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "bold");
     textResume.text("Repertoire Development", left_margin, distance_current);
 
-    increaseCurrent(distance_20);
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "normal");
     var makeMusicExperience = workHistoryExperience[2].innerText.split("\n");
     textResume.text("•", indent_dot, distance_current);
     textResume.text(makeMusicExperience[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(distance_50);
+    increaseCurrent(distance_40);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(makeMusicExperience[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(distance_35);
+    increaseCurrent(distance_25);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(makeMusicExperience[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_25);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(makeMusicExperience[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - (indent_margin - indent_dot) });
 
-    textResume.line(left_margin, distance_current + 0.06, right_margin, distance_current + 0.06);
+    increaseCurrent(distance_15)
+    textResume.line(left_margin, distance_current, right_margin, distance_current);
+
 
     increaseCurrent(distance_25);
     textResume.setFont("helvetica", "bold");
@@ -238,41 +229,44 @@ function createTextPDF() {
     var certs = document.getElementsByClassName("reference-link");
     var certs = certs[certs.length - 1].innerText.split("\n");
 
-    increaseCurrent(distance_20);
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "normal");
     textResume.setFontSize(section_content_size);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(certs[0].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_25);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(certs[1].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    // increaseCurrent(list_one_line);
-    // textResume.text("•", indent_dot, distance_current);
-    // textResume.text(certs[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+    increaseCurrent(distance_25);
+    textResume.text("•", indent_dot, distance_current);
+    textResume.text(certs[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_25);
     textResume.text("•", indent_dot, distance_current);
     textResume.text(certs[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    textResume.line(left_margin, distance_current + distance_10, right_margin, distance_current + distance_10);
 
-    increaseCurrent(distance_30);
+    increaseCurrent(distance_15)
+    textResume.line(left_margin, distance_current, right_margin, distance_current);
+
+
+    increaseCurrent(distance_25);
     textResume.setFont("helvetica", "bold");
     textResume.setFontSize(section_heading_size);
     textResume.text("Education", left_margin, distance_current);
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_25);
     textResume.setFontSize(section_subheader_size);
     textResume.text(workHistoryTitle[2].innerText, left_margin, distance_current);
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_20);
     textResume.setFont("helvetica", "normal");
     textResume.setFontSize(section_subheader_size);
     textResume.text(workHistoryCompany[2].innerText, left_margin, distance_current);
 
-    increaseCurrent(list_one_line);
+    increaseCurrent(distance_20);
     textResume.setFont("helvetica", "italic");
     textResume.setFontSize(section_content_size);
     var educationDetails = workHistorySummary[2].innerText.split("\n");

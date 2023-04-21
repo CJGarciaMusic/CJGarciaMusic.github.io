@@ -21,7 +21,7 @@ function openSection(evt, sectionName) {
     }
 }
 
-function createTextPDF() {
+function createTextPDF(resumeType) {
     window.jsPDF = window.jspdf.jsPDF
     var textResume = new jsPDF({
         orientation: 'p',
@@ -119,7 +119,12 @@ function createTextPDF() {
 
     increaseCurrent(distance_25);
     textResume.setFontSize(section_subheader_size);
-    textResume.text(workHistoryTitle[0].innerText, left_margin, distance_current);
+    if (resumeType == 'External') {
+        textResume.text(workHistoryTitle[0].innerText, left_margin, distance_current);
+    }
+    if (resumeType == 'Google') {
+        textResume.text("Software Engineering Apprentice", left_margin, distance_current);
+    }
 
     increaseCurrent(distance_20);
     textResume.setFont("helvetica", "normal");
@@ -273,7 +278,12 @@ function createTextPDF() {
     textResume.text(educationDetails[0], left_margin, distance_current);
     textResume.text(educationDetails[1], right_margin, distance_current, null, null, "right");
 
-    textResume.save(`CJ_Garcia_Resume_Text_${today}.pdf`);
+    if (resumeType == "External") {
+        textResume.save(`CJ_Garcia_Resume_Text_${today}.pdf`);
+    }
+    if (resumeType == "Google") {
+        textResume.save(`CJ_Garcia_gResume_Text_${today}.pdf`);
+    }
 }
 
 function createPDFfromHTML() {

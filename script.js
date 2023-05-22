@@ -248,9 +248,9 @@ function createTextPDF(resumeType) {
     textResume.text("•", indent_dot, distance_current);
     textResume.text(certs[2].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
-    // increaseCurrent(distance_25);
-    // textResume.text("•", indent_dot, distance_current);
-    // textResume.text(certs[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
+    increaseCurrent(distance_25);
+    textResume.text("•", indent_dot, distance_current);
+    textResume.text(certs[3].trim(), indent_margin, distance_current, { maxWidth: 7.2 - indent_margin });
 
 
     increaseCurrent(distance_15)

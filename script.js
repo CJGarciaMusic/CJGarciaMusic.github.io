@@ -279,10 +279,10 @@ function createTextPDF(resumeType) {
     textResume.text(educationDetails[1], right_margin, distance_current, null, null, "right");
 
     if (resumeType == "External") {
-        textResume.save(`CJ_Garcia_Resume_Text_${today}.pdf`);
+        textResume.save(`CJ_Garcia_Resume_${today}.pdf`);
     }
     if (resumeType == "Google") {
-        textResume.save(`CJ_Garcia_gResume_Text_${today}.pdf`);
+        textResume.save(`CJ_Garcia_gResume_${today}.pdf`);
     }
 }
 
